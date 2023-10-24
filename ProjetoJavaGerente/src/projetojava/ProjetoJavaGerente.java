@@ -1,7 +1,7 @@
 
 package projetojava;
 
-public class ProjetoJava {
+public class ProjetoJavaGerente {
 
     public static void main(String[] args) {
 
