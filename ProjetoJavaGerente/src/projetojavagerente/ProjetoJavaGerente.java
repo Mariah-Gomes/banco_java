@@ -1,14 +1,14 @@
 
 package projetojavagerente;
 
-import view.SenhaBanco;
+import view.LoginGerente;
 
 public class ProjetoJavaGerente {
 
     public static void main(String[] args) {
 
-        SenhaBanco sb = new SenhaBanco();
-        sb.setVisible(true);
+        LoginGerente lg = new LoginGerente();
+        lg.setVisible(true);
         
     }
     
