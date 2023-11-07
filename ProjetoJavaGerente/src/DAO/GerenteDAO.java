@@ -14,7 +14,7 @@ public class GerenteDAO {
         this.conn = conn;
     }
     
-    public ResultSet consultar(Gerente gerente) throws SQLException{
+    public ResultSet consultarGerente(Gerente gerente) throws SQLException{
         String sql = "select * from gerentes where login = ? and senha = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, gerente.getLogin());
@@ -24,7 +24,7 @@ public class GerenteDAO {
         return resultado;
     }
     
-    public void inserir(Gerente gerente) throws SQLException{
+    public void inserirGerente(Gerente gerente) throws SQLException{
         String sql = "insert into gerentes (nome, login, senha) values ('" +
                 gerente.getNome() + "','" + gerente.getLogin()+ "','" + 
                 gerente.getSenha() + "')";
