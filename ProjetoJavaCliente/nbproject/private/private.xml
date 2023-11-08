@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/NetBeansProjects/ProjetoJavaCliente/src/view/DebitarClienteValor.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/NetBeansProjects/ProjetoJavaCliente/src/model/Cliente.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/NetBeansProjects/ProjetoJavaCliente/src/model/Salario.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/NetBeansProjects/ProjetoJavaCliente/src/view/DebitarCliente.java</file>
+            <file>file:/C:/Users/iago2/Dropbox/My%20PC%20(LAPTOP-D5OE8UAQ)/Downloads/JavaProject-Mariah/JavaProject-Mariah/ProjetoJavaCliente/src/view/DebitarCliente.java</file>
+            <file>file:/C:/Users/iago2/Dropbox/My%20PC%20(LAPTOP-D5OE8UAQ)/Downloads/JavaProject-Mariah/JavaProject-Mariah/ProjetoJavaCliente/src/controller/ControllerDebitoCliente.java</file>
+            <file>file:/C:/Users/iago2/Dropbox/My%20PC%20(LAPTOP-D5OE8UAQ)/Downloads/JavaProject-Mariah/JavaProject-Mariah/ProjetoJavaCliente/src/model/Cliente.java</file>
+            <file>file:/C:/Users/iago2/Dropbox/My%20PC%20(LAPTOP-D5OE8UAQ)/Downloads/JavaProject-Mariah/JavaProject-Mariah/ProjetoJavaCliente/src/controller/ControllerDebitoClienteValor.java</file>
+            <file>file:/C:/Users/iago2/Dropbox/My%20PC%20(LAPTOP-D5OE8UAQ)/Downloads/JavaProject-Mariah/JavaProject-Mariah/ProjetoJavaCliente/src/view/DebitarClienteValor.java</file>
         </group>
     </open-files>
 </project-private>
