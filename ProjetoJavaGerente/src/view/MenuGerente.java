@@ -4,6 +4,10 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import model.Gerente;
+
 /**
  *
  * @author iago2
@@ -13,10 +17,60 @@ public class MenuGerente extends javax.swing.JFrame {
     /**
      * Creates new form MenuGerente
      */
-    public MenuGerente() {
+    public MenuGerente(Gerente gerente) {
         initComponents();
     }
 
+    public JButton getBtCadastrarCliente() {
+        return btCadastrarCliente;
+    }
+
+    public void setBtCadastrarCliente(JButton btCadastrarCliente) {
+        this.btCadastrarCliente = btCadastrarCliente;
+    }
+
+    public JButton getBtCriarConta() {
+        return btCriarConta;
+    }
+
+    public void setBtCriarConta(JButton btCriarConta) {
+        this.btCriarConta = btCriarConta;
+    }
+
+    public JButton getBtExcluirCliente() {
+        return btExcluirCliente;
+    }
+
+    public void setBtExcluirCliente(JButton btExcluirCliente) {
+        this.btExcluirCliente = btExcluirCliente;
+    }
+
+    public JButton getBtExibirContas() {
+        return btExibirContas;
+    }
+
+    public void setBtExibirContas(JButton btExibirContas) {
+        this.btExibirContas = btExibirContas;
+    }
+
+    public JButton getBtExibirSaldo() {
+        return btExibirSaldo;
+    }
+
+    public void setBtExibirSaldo(JButton btExibirSaldo) {
+        this.btExibirSaldo = btExibirSaldo;
+    }
+
+    public JLabel getLbMenuGerente() {
+        return lbMenuGerente;
+    }
+
+    public void setLbMenuGerente(JLabel lbMenuGerente) {
+        this.lbMenuGerente = lbMenuGerente;
+    }
+
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

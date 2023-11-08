@@ -4,6 +4,14 @@
  */
 package view;
 
+import controller.ControllerLoginGerente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JTextField;
+
 /**
  *
  * @author iago2
@@ -15,6 +23,71 @@ public class LoginGerente extends javax.swing.JFrame {
      */
     public LoginGerente() {
         initComponents();
+        controller = new ControllerLoginGerente(this);
+    }
+
+    public JMenuItem getNovoGerente() {
+        return NovoGerente;
+    }
+
+    public void setNovoGerente(JMenuItem NovoGerente) {
+        this.NovoGerente = NovoGerente;
+    }
+
+    public JMenu getOpcoes() {
+        return Opcoes;
+    }
+
+    public void setOpcoes(JMenu Opcoes) {
+        this.Opcoes = Opcoes;
+    }
+
+    public JButton getBtEntrar() {
+        return btEntrar;
+    }
+
+    public void setBtEntrar(JButton btEntrar) {
+        this.btEntrar = btEntrar;
+    }
+
+    public JMenuBar getjMenuBar1() {
+        return jMenuBar1;
+    }
+
+    public void setjMenuBar1(JMenuBar jMenuBar1) {
+        this.jMenuBar1 = jMenuBar1;
+    }
+
+    public JLabel getLbLogin() {
+        return lbLogin;
+    }
+
+    public void setLbLogin(JLabel lbLogin) {
+        this.lbLogin = lbLogin;
+    }
+
+    public JLabel getLbSenhaLogin() {
+        return lbSenhaLogin;
+    }
+
+    public void setLbSenhaLogin(JLabel lbSenhaLogin) {
+        this.lbSenhaLogin = lbSenhaLogin;
+    }
+
+    public JTextField getTxtEntradaLogin() {
+        return txtEntradaLogin;
+    }
+
+    public void setTxtEntradaLogin(JTextField txtEntradaLogin) {
+        this.txtEntradaLogin = txtEntradaLogin;
+    }
+
+    public JTextField getTxtEntradaSenha() {
+        return txtEntradaSenha;
+    }
+
+    public void setTxtEntradaSenha(JTextField txtEntradaSenha) {
+        this.txtEntradaSenha = txtEntradaSenha;
     }
 
     /**
@@ -32,8 +105,8 @@ public class LoginGerente extends javax.swing.JFrame {
         txtEntradaSenha = new javax.swing.JTextField();
         btEntrar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        Opcoes = new javax.swing.JMenuItem();
+        Opcoes = new javax.swing.JMenu();
+        NovoGerente = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,15 +127,25 @@ public class LoginGerente extends javax.swing.JFrame {
         });
 
         btEntrar.setText("Entrar");
+        btEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEntrarActionPerformed(evt);
+            }
+        });
 
-        jMenu1.setText("Opções");
+        Opcoes.setText("Opções");
 
-        Opcoes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        Opcoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/newuser.png"))); // NOI18N
-        Opcoes.setText("Novo gerente");
-        jMenu1.add(Opcoes);
+        NovoGerente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        NovoGerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/newuser.png"))); // NOI18N
+        NovoGerente.setText("Novo gerente");
+        NovoGerente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NovoGerenteActionPerformed(evt);
+            }
+        });
+        Opcoes.add(NovoGerente);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(Opcoes);
 
         setJMenuBar(jMenuBar1);
 
@@ -109,6 +192,17 @@ public class LoginGerente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEntradaSenhaActionPerformed
 
+    private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
+        // TODO add your handling code here:
+        controller.loginGerente();
+    }//GEN-LAST:event_btEntrarActionPerformed
+
+    private void NovoGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NovoGerenteActionPerformed
+        // TODO add your handling code here:
+        CadastroGerente cg = new CadastroGerente();
+        cg.setVisible(true);
+    }//GEN-LAST:event_NovoGerenteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -144,10 +238,12 @@ public class LoginGerente extends javax.swing.JFrame {
 //        });
 //    }
 
+    private ControllerLoginGerente controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem Opcoes;
+    private javax.swing.JMenuItem NovoGerente;
+    private javax.swing.JMenu Opcoes;
     private javax.swing.JButton btEntrar;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel lbLogin;
     private javax.swing.JLabel lbSenhaLogin;
