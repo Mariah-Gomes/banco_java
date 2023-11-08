@@ -4,6 +4,8 @@
  */
 package view;
 
+import model.Cliente;
+
 /**
  *
  * @author unifmgomes
@@ -13,7 +15,7 @@ public class DebitarClienteConta extends javax.swing.JFrame {
     /**
      * Creates new form debitarClienteConta
      */
-    public DebitarClienteConta() {
+    public DebitarClienteConta(Cliente cliente) {
         initComponents();
     }
 

@@ -1,20 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
-/**
- *
- * @author unifmgomes
- */
+import view.DebitarCliente;
+import controller.ControllerDebitoCliente;
+import controller.ControllerInicioCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
+
 public class InicioCliente extends javax.swing.JFrame {
 
     /**
      * Creates new form InicioCliente
      */
-    public InicioCliente() {
+    public InicioCliente () {
         initComponents();
+        
     }
 
     /**
@@ -110,19 +111,23 @@ public class InicioCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void depositarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositarClienteActionPerformed
-        // TODO add your handling code here:
+        DepositarCliente depositarcliente = new DepositarCliente();
+        depositarcliente.setVisible(true);
     }//GEN-LAST:event_depositarClienteActionPerformed
 
     private void debitarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debitarCliente1ActionPerformed
-        // TODO add your handling code here:
+        DebitarCliente debitarcliente = new DebitarCliente();
+        debitarcliente.setVisible(true);
     }//GEN-LAST:event_debitarCliente1ActionPerformed
 
     private void exiberSaldoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exiberSaldoClienteActionPerformed
-        // TODO add your handling code here:
+        ExibirSaldoCliente exibirsaldocliente = new ExibirSaldoCliente();
+        exibirsaldocliente.setVisible(true);
     }//GEN-LAST:event_exiberSaldoClienteActionPerformed
 
     private void debitarCliente3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debitarCliente3ActionPerformed
-        // TODO add your handling code here:
+        ExibirExtratoCliente exibirextratocliente = new ExibirExtratoCliente();
+        exibirextratocliente.setVisible(true);
     }//GEN-LAST:event_debitarCliente3ActionPerformed
 
     /**
@@ -160,6 +165,78 @@ public class InicioCliente extends javax.swing.JFrame {
 //        });
 //    }
 
+    public JButton getDebitarCliente1() {
+        return debitarCliente1;
+    }
+
+    public void setDebitarCliente1(JButton debitarCliente1) {
+        this.debitarCliente1 = debitarCliente1;
+    }
+
+    public JButton getDebitarCliente3() {
+        return debitarCliente3;
+    }
+
+    public void setDebitarCliente3(JButton debitarCliente3) {
+        this.debitarCliente3 = debitarCliente3;
+    }
+
+    public JButton getDepositarCliente() {
+        return depositarCliente;
+    }
+
+    public void setDepositarCliente(JButton depositarCliente) {
+        this.depositarCliente = depositarCliente;
+    }
+
+    public JButton getExiberSaldoCliente() {
+        return exiberSaldoCliente;
+    }
+
+    public void setExiberSaldoCliente(JButton exiberSaldoCliente) {
+        this.exiberSaldoCliente = exiberSaldoCliente;
+    }
+
+    public JLabel getTituloMenuCliente() {
+        return tituloMenuCliente;
+    }
+
+ 
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new InicioCliente().setVisible(true);
+//            }
+//        });
+//    }
+    public void setTituloMenuCliente(JLabel tituloMenuCliente) {
+        this.tituloMenuCliente = tituloMenuCliente;
+    }
+    private ControllerInicioCliente controlInicioCliente;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton debitarCliente1;
     private javax.swing.JButton debitarCliente3;
