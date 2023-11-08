@@ -4,6 +4,12 @@
  */
 package view;
 
+import controller.ControllerExcluirCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import model.Cliente;
+
 /**
  *
  * @author iago2
@@ -13,8 +19,41 @@ public class ExcluirCliente extends javax.swing.JFrame {
     /**
      * Creates new form ExcluirCliente
      */
-    public ExcluirCliente() {
+    public ExcluirCliente(Cliente cliente) {
         initComponents();
+        controller = new ControllerExcluirCliente(this, cliente);
+    }
+
+    public JButton getBtExcluir() {
+        return btExcluir;
+    }
+
+    public void setBtExcluir(JButton btExcluir) {
+        this.btExcluir = btExcluir;
+    }
+
+    public JLabel getLbCPF() {
+        return lbCPF;
+    }
+
+    public void setLbCPF(JLabel lbCPF) {
+        this.lbCPF = lbCPF;
+    }
+
+    public JLabel getLbExcluirCliente() {
+        return lbExcluirCliente;
+    }
+
+    public void setLbExcluirCliente(JLabel lbExcluirCliente) {
+        this.lbExcluirCliente = lbExcluirCliente;
+    }
+
+    public JTextField getTxtEntradaCPFExcluir() {
+        return txtEntradaCPFExcluir;
+    }
+
+    public void setTxtEntradaCPFExcluir(JTextField txtEntradaCPFExcluir) {
+        this.txtEntradaCPFExcluir = txtEntradaCPFExcluir;
     }
 
     /**
@@ -43,6 +82,11 @@ public class ExcluirCliente extends javax.swing.JFrame {
         txtEntradaCPFExcluir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         btExcluir.setText("Excluir");
+        btExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExcluirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,6 +124,11 @@ public class ExcluirCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
+        // TODO add your handling code here:
+        controller.removerCliente();
+    }//GEN-LAST:event_btExcluirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -115,6 +164,8 @@ public class ExcluirCliente extends javax.swing.JFrame {
 //        });
 //    }
 
+    private ControllerExcluirCliente controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btExcluir;
     private javax.swing.JLabel lbCPF;

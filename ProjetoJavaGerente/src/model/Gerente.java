@@ -8,10 +8,6 @@ public class Gerente extends Pessoa{
     public Gerente() {
     }
 
-    public Gerente(String login) {
-        this.login = login;
-    }
-
     public Gerente(String login, String nome, String senha) {
         super(nome, senha);
         this.login = login;

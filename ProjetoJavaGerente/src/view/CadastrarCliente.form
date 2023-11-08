@@ -30,12 +30,10 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="lbNome" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="lbCPF" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
                   </Group>
                   <Component id="txtEntradaCPFCadastrar" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="txtEntradaNomeCadastrar" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
@@ -159,6 +157,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCadastrarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

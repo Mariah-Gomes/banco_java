@@ -9,12 +9,6 @@ public class Cliente extends Pessoa{
     public Cliente() {
     }
 
-    public Cliente(String cpf, String tipoConta, double saldo) {
-        this.cpf = cpf;
-        this.tipoConta = tipoConta;
-        this.saldo = saldo;
-    }
-
     public Cliente(String cpf, String tipoConta, double saldo, String nome,
             String senha) {
         super(nome, senha);

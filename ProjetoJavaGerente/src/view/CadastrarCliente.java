@@ -4,6 +4,11 @@
  */
 package view;
 
+import controller.ControllerCadastroCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author iago2
@@ -15,6 +20,87 @@ public class CadastrarCliente extends javax.swing.JFrame {
      */
     public CadastrarCliente() {
         initComponents();
+        controller = new ControllerCadastroCliente(this);
+    }
+
+    public JButton getBtCadastrar() {
+        return btCadastrar;
+    }
+
+    public void setBtCadastrar(JButton btCadastrar) {
+        this.btCadastrar = btCadastrar;
+    }
+
+    public JLabel getLbCPF() {
+        return lbCPF;
+    }
+
+    public void setLbCPF(JLabel lbCPF) {
+        this.lbCPF = lbCPF;
+    }
+
+    public JLabel getLbCadastrarCliente() {
+        return lbCadastrarCliente;
+    }
+
+    public void setLbCadastrarCliente(JLabel lbCadastrarCliente) {
+        this.lbCadastrarCliente = lbCadastrarCliente;
+    }
+
+    public JLabel getLbNome() {
+        return lbNome;
+    }
+
+    public void setLbNome(JLabel lbNome) {
+        this.lbNome = lbNome;
+    }
+
+    public JLabel getLbSenha() {
+        return lbSenha;
+    }
+
+    public void setLbSenha(JLabel lbSenha) {
+        this.lbSenha = lbSenha;
+    }
+
+    public JLabel getLbValorInicial() {
+        return lbValorInicial;
+    }
+
+    public void setLbValorInicial(JLabel lbValorInicial) {
+        this.lbValorInicial = lbValorInicial;
+    }
+
+    public JTextField getTxtEntradaCPFCadastrar() {
+        return txtEntradaCPFCadastrar;
+    }
+
+    public void setTxtEntradaCPFCadastrar(JTextField txtEntradaCPFCadastrar) {
+        this.txtEntradaCPFCadastrar = txtEntradaCPFCadastrar;
+    }
+
+    public JTextField getTxtEntradaNomeCadastrar() {
+        return txtEntradaNomeCadastrar;
+    }
+
+    public void setTxtEntradaNomeCadastrar(JTextField txtEntradaNomeCadastrar) {
+        this.txtEntradaNomeCadastrar = txtEntradaNomeCadastrar;
+    }
+
+    public JTextField getTxtEntradaSenhaCadastrar() {
+        return txtEntradaSenhaCadastrar;
+    }
+
+    public void setTxtEntradaSenhaCadastrar(JTextField txtEntradaSenhaCadastrar) {
+        this.txtEntradaSenhaCadastrar = txtEntradaSenhaCadastrar;
+    }
+
+    public JTextField getTxtEntradaValorInicialCadastrar() {
+        return txtEntradaValorInicialCadastrar;
+    }
+
+    public void setTxtEntradaValorInicialCadastrar(JTextField txtEntradaValorInicialCadastrar) {
+        this.txtEntradaValorInicialCadastrar = txtEntradaValorInicialCadastrar;
     }
 
     /**
@@ -75,6 +161,11 @@ public class CadastrarCliente extends javax.swing.JFrame {
         lbSenha.setText("Senha:");
 
         btCadastrar.setText("Cadastrar");
+        btCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,12 +177,10 @@ public class CadastrarCliente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(lbNome)
-                        .addGap(33, 33, 33))
+                        .addComponent(lbNome))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addComponent(lbCPF)
-                        .addGap(38, 38, 38))
+                        .addComponent(lbCPF))
                     .addComponent(txtEntradaCPFCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtEntradaNomeCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
@@ -147,6 +236,11 @@ public class CadastrarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEntradaCPFCadastrarActionPerformed
 
+    private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
+        // TODO add your handling code here:
+        controller.salvarCliente();
+    }//GEN-LAST:event_btCadastrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -182,6 +276,8 @@ public class CadastrarCliente extends javax.swing.JFrame {
 //        });
 //    }
 
+    private ControllerCadastroCliente controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrar;
     private javax.swing.JLabel lbCPF;
