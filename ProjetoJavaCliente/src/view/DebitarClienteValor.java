@@ -10,9 +10,6 @@ import javax.swing.JTextField;
 
 public class DebitarClienteValor extends javax.swing.JFrame {
 
-    /**
-     * Creates new form debitarClienteValor
-     */
     public DebitarClienteValor(Cliente cliente) {
         initComponents();
     }
@@ -93,7 +90,7 @@ public class DebitarClienteValor extends javax.swing.JFrame {
     }//GEN-LAST:event_valorCienteDebitarEntradaActionPerformed
 
     private void butClienteDebitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteDebitarActionPerformed
-        controllerDebitoValor.debitarClienteDebito();
+        controllerDebitoValor.debitar();
     }//GEN-LAST:event_butClienteDebitarActionPerformed
 
     /**

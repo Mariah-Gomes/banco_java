@@ -6,6 +6,7 @@ import controller.ControllerDebitoCliente;
 import controller.ControllerInicioCliente;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import model.Cliente;
 
 
 public class InicioCliente extends javax.swing.JFrame {
@@ -13,9 +14,9 @@ public class InicioCliente extends javax.swing.JFrame {
     /**
      * Creates new form InicioCliente
      */
-    public InicioCliente () {
+    public InicioCliente (Cliente cliente) {
         initComponents();
-        
+        controlInicioCliente = new ControllerInicioCliente(this);
     }
 
     /**
@@ -111,23 +112,19 @@ public class InicioCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void depositarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositarClienteActionPerformed
-        DepositarCliente depositarcliente = new DepositarCliente();
-        depositarcliente.setVisible(true);
+        controlInicioCliente.depositarCliente();
     }//GEN-LAST:event_depositarClienteActionPerformed
 
     private void debitarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debitarCliente1ActionPerformed
-        DebitarCliente debitarcliente = new DebitarCliente();
-        debitarcliente.setVisible(true);
+        controlInicioCliente.debitarCliente();
     }//GEN-LAST:event_debitarCliente1ActionPerformed
 
     private void exiberSaldoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exiberSaldoClienteActionPerformed
-        ExibirSaldoCliente exibirsaldocliente = new ExibirSaldoCliente();
-        exibirsaldocliente.setVisible(true);
+        controlInicioCliente.exibirSaldoCliente();
     }//GEN-LAST:event_exiberSaldoClienteActionPerformed
 
     private void debitarCliente3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debitarCliente3ActionPerformed
-        ExibirExtratoCliente exibirextratocliente = new ExibirExtratoCliente();
-        exibirextratocliente.setVisible(true);
+        controlInicioCliente.exibirExtratoCliente();
     }//GEN-LAST:event_debitarCliente3ActionPerformed
 
     /**

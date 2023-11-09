@@ -1,5 +1,7 @@
 
 package model;
+import view.DebitarClienteValor;
+
 
 public class Salario extends TiposDeConta{
 
@@ -10,14 +12,14 @@ public class Salario extends TiposDeConta{
         super(taxa, limite);
     }
     
-//    public void calculoTaxa(){
-//        taxa = 0.05;
-//        double valorTaxa = valorDebito * taxa;
+    public void calculoTaxaDebitoSalario(){
+        taxa = 0.05;
+//        double valorTaxa = Double.parseDouble(get.valorCienteDebitarEntrada()) * taxa;
 //        if (valorTaxa > limite){
 //            System.out.println("Não foi possível realizar a operação");
 //        }
 //        else{
 //            limite = limite - valorTaxa;
 //        }
-//    }
+    }
 }

@@ -8,14 +8,38 @@ import javax.swing.JOptionPane;
 import view.DebitarCliente;
 import view.InicioCliente;
 import model.Cliente;
+import view.DepositarCliente;
+import view.ExibirExtratoCliente;
+import view.ExibirSaldoCliente;
 
 public class ControllerInicioCliente {
     private InicioCliente view;
-    private Cliente cliente;
 
-    public ControllerInicioCliente(InicioCliente view, Cliente cliente) {
+    public ControllerInicioCliente(InicioCliente view) {
         this.view = view;
-        this.cliente = cliente;
     }
     
+    public void debitarCliente(){
+        DebitarCliente viewDebitarCliente = new DebitarCliente();
+        viewDebitarCliente.setVisible(true);
+        view.setVisible(false);
+    }
+    
+    public void depositarCliente(){
+        DepositarCliente viewDepositarCliente = new DepositarCliente();
+        viewDepositarCliente.setVisible(true);
+        view.setVisible(false);
+    }
+    
+    public void exibirExtratoCliente(){
+        ExibirExtratoCliente viewExibirExtratoCliente = new ExibirExtratoCliente();
+        viewExibirExtratoCliente.setVisible(true);
+        view.setVisible(false);
+    }
+    
+    public void exibirSaldoCliente(){
+        ExibirSaldoCliente viewExibirSaldoCliente = new ExibirSaldoCliente();
+        viewExibirSaldoCliente.setVisible(true);
+        view.setVisible(false);
+    }
 }
