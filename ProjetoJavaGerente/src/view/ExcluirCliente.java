@@ -8,7 +8,6 @@ import controller.ControllerExcluirCliente;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import model.Cliente;
 
 /**
  *
@@ -19,9 +18,10 @@ public class ExcluirCliente extends javax.swing.JFrame {
     /**
      * Creates new form ExcluirCliente
      */
-    public ExcluirCliente(Cliente cliente) {
+
+    public ExcluirCliente() {
         initComponents();
-        controller = new ControllerExcluirCliente(this, cliente);
+        controller = new ControllerExcluirCliente(this);
     }
 
     public JButton getBtExcluir() {
@@ -70,7 +70,7 @@ public class ExcluirCliente extends javax.swing.JFrame {
         txtEntradaCPFExcluir = new javax.swing.JTextField();
         btExcluir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lbExcluirCliente.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         lbExcluirCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -126,7 +126,7 @@ public class ExcluirCliente extends javax.swing.JFrame {
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
         // TODO add your handling code here:
-        controller.removerCliente();
+        controller.excluirCliente();
     }//GEN-LAST:event_btExcluirActionPerformed
 
     /**

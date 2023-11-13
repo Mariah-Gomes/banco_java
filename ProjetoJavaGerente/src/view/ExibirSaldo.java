@@ -31,7 +31,7 @@ public class ExibirSaldo extends javax.swing.JFrame {
         txtEntradaCPFExibir = new javax.swing.JTextField();
         btExibir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lbExibirSaldo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         lbExibirSaldo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

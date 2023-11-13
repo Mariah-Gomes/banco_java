@@ -105,7 +105,7 @@ public class CadastroGerente extends javax.swing.JFrame {
         btCadastrarGerente = new javax.swing.JButton();
         txtEntradaNomeCadastroGerente = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lbCadastrarGerente.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         lbCadastrarGerente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

@@ -108,7 +108,7 @@ public class LoginGerente extends javax.swing.JFrame {
         Opcoes = new javax.swing.JMenu();
         NovoGerente = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lbLogin.setText("Login:");
 

@@ -4,6 +4,7 @@
  */
 package view;
 
+import controller.ControllerPaginasMenuGerente;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import model.Gerente;
@@ -19,6 +20,7 @@ public class MenuGerente extends javax.swing.JFrame {
      */
     public MenuGerente(Gerente gerente) {
         initComponents();
+        controller = new ControllerPaginasMenuGerente(this);
     }
 
     public JButton getBtCadastrarCliente() {
@@ -87,7 +89,7 @@ public class MenuGerente extends javax.swing.JFrame {
         btExibirSaldo = new javax.swing.JButton();
         lbMenuGerente = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         btCadastrarCliente.setText("Cadastrar Cliente");
         btCadastrarCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -166,14 +168,17 @@ public class MenuGerente extends javax.swing.JFrame {
 
     private void btCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarClienteActionPerformed
         // TODO add your handling code here:
+        controller.entrarCadastrarCliente();
     }//GEN-LAST:event_btCadastrarClienteActionPerformed
 
     private void btExcluirClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirClienteActionPerformed
         // TODO add your handling code here:
+        controller.entrarExcluirCliente();
     }//GEN-LAST:event_btExcluirClienteActionPerformed
 
     private void btCriarContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCriarContaActionPerformed
         // TODO add your handling code here:
+        controller.entrarCriarConta();
     }//GEN-LAST:event_btCriarContaActionPerformed
 
     private void btExibirContasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirContasActionPerformed
@@ -182,6 +187,7 @@ public class MenuGerente extends javax.swing.JFrame {
 
     private void btExibirSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirSaldoActionPerformed
         // TODO add your handling code here:
+        controller.entrarExibirSaldo();
     }//GEN-LAST:event_btExibirSaldoActionPerformed
 
     /**
@@ -219,6 +225,8 @@ public class MenuGerente extends javax.swing.JFrame {
 //        });
 //    }
 
+    private ControllerPaginasMenuGerente controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrarCliente;
     private javax.swing.JButton btCriarConta;

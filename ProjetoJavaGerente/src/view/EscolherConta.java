@@ -34,7 +34,7 @@ public class EscolherConta extends javax.swing.JFrame {
 
         btContaCorrenteCriar1.setText("Conta Corrente");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lbCriarConta.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         lbCriarConta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
