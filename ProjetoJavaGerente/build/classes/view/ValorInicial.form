@@ -24,23 +24,23 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="lbCriarConta" alignment="0" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="btCriarConta" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
-                      <Component id="lbCPF" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="txtEntradaValorInicialCriar" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
-                      <Component id="txtEntradaCPFCriar" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
+                      <Component id="lbValorInicial" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="150" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="btCriar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -50,11 +50,11 @@
               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
               <Component id="lbCriarConta" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              <Component id="lbCPF" min="-2" max="-2" attributes="0"/>
+              <Component id="lbValorInicial" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="txtEntradaCPFCriar" min="-2" max="-2" attributes="0"/>
+              <Component id="txtEntradaValorInicialCriar" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btCriar" min="-2" max="-2" attributes="0"/>
+              <Component id="btCriarConta" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="97" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -70,23 +70,26 @@
         <Property name="text" type="java.lang.String" value="Criar Conta"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbCPF">
+    <Component class="javax.swing.JLabel" name="lbValorInicial">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="CPF:"/>
+        <Property name="text" type="java.lang.String" value="Valor inicial:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtEntradaCPFCriar">
+    <Component class="javax.swing.JTextField" name="txtEntradaValorInicialCriar">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEntradaValorInicialCriarActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btCriar">
+    <Component class="javax.swing.JButton" name="btCriarConta">
       <Properties>
         <Property name="text" type="java.lang.String" value="Criar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCriarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCriarContaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

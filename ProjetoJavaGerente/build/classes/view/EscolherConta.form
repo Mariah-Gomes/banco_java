@@ -72,16 +72,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Conta Poupan&#xe7;a"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btContaPoupancaCriarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btContaCorrenteCriar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Conta Corrente"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btContaCorrenteCriarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btContaSalarioCriar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Conta Sal&#xe1;rio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btContaSalarioCriarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
