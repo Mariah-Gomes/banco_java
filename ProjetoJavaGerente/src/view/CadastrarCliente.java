@@ -63,14 +63,6 @@ public class CadastrarCliente extends javax.swing.JFrame {
         this.lbSenha = lbSenha;
     }
 
-    public JLabel getLbValorInicial() {
-        return lbValorInicial;
-    }
-
-    public void setLbValorInicial(JLabel lbValorInicial) {
-        this.lbValorInicial = lbValorInicial;
-    }
-
     public JTextField getTxtEntradaCPFCadastrar() {
         return txtEntradaCPFCadastrar;
     }
@@ -95,14 +87,6 @@ public class CadastrarCliente extends javax.swing.JFrame {
         this.txtEntradaSenhaCadastrar = txtEntradaSenhaCadastrar;
     }
 
-    public JTextField getTxtEntradaValorInicialCadastrar() {
-        return txtEntradaValorInicialCadastrar;
-    }
-
-    public void setTxtEntradaValorInicialCadastrar(JTextField txtEntradaValorInicialCadastrar) {
-        this.txtEntradaValorInicialCadastrar = txtEntradaValorInicialCadastrar;
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -116,14 +100,12 @@ public class CadastrarCliente extends javax.swing.JFrame {
         txtEntradaNomeCadastrar = new javax.swing.JTextField();
         txtEntradaSenhaCadastrar = new javax.swing.JTextField();
         txtEntradaCPFCadastrar = new javax.swing.JTextField();
-        txtEntradaValorInicialCadastrar = new javax.swing.JTextField();
         lbNome = new javax.swing.JLabel();
         lbCPF = new javax.swing.JLabel();
-        lbValorInicial = new javax.swing.JLabel();
         lbSenha = new javax.swing.JLabel();
         btCadastrar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lbCadastrarCliente.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         lbCadastrarCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -145,17 +127,12 @@ public class CadastrarCliente extends javax.swing.JFrame {
             }
         });
 
-        txtEntradaValorInicialCadastrar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
         lbNome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbNome.setText("Nome:");
 
         lbCPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbCPF.setText("CPF:");
         lbCPF.setToolTipText("");
-
-        lbValorInicial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbValorInicial.setText("Valor Inicial:");
 
         lbSenha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbSenha.setText("Senha:");
@@ -173,31 +150,23 @@ public class CadastrarCliente extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbCadastrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(128, 128, 128)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(lbNome))
+                        .addComponent(lbCPF)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtEntradaCPFCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(lbCPF))
-                    .addComponent(txtEntradaCPFCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaNomeCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lbValorInicial)
-                        .addGap(19, 19, 19))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lbNome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtEntradaNomeCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(lbSenha)
-                        .addGap(32, 32, 32))
-                    .addComponent(txtEntradaSenhaCadastrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaValorInicialCadastrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(68, 68, 68))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addComponent(btCadastrar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btCadastrar)
+                            .addComponent(txtEntradaSenhaCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,23 +175,19 @@ public class CadastrarCliente extends javax.swing.JFrame {
                 .addComponent(lbCadastrarCliente)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbNome)
-                    .addComponent(lbValorInicial))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEntradaNomeCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaValorInicialCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbNome))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbCPF)
-                    .addComponent(lbSenha))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEntradaCPFCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaSenhaCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                    .addComponent(lbCPF))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEntradaSenhaCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbSenha))
+                .addGap(18, 18, 18)
                 .addComponent(btCadastrar)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         pack();
@@ -284,10 +249,8 @@ public class CadastrarCliente extends javax.swing.JFrame {
     private javax.swing.JLabel lbCadastrarCliente;
     private javax.swing.JLabel lbNome;
     private javax.swing.JLabel lbSenha;
-    private javax.swing.JLabel lbValorInicial;
     private javax.swing.JTextField txtEntradaCPFCadastrar;
     private javax.swing.JTextField txtEntradaNomeCadastrar;
     private javax.swing.JTextField txtEntradaSenhaCadastrar;
-    private javax.swing.JTextField txtEntradaValorInicialCadastrar;
     // End of variables declaration//GEN-END:variables
 }

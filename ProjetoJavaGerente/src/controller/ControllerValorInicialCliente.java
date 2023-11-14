@@ -1,35 +1,34 @@
 
 package controller;
-
 import DAO.ClienteDAO;
 import DAO.Conexao;
 import model.Cliente;
-import view.CadastrarCliente;
+import view.ValorInicial;
 import java.sql.Connection;
-import javax.swing.JOptionPane;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
-public class ControllerCadastroCliente {
+public class ControllerValorInicialCliente {
     
-    private CadastrarCliente view;
+    private ValorInicial view;
+    private String cpf;
 
-    public ControllerCadastroCliente(CadastrarCliente view) {
+    public ControllerValorInicialCliente(ValorInicial view, String cpf) {
         this.view = view;
+        this.cpf = cpf;
     }
     
-    public void salvarCliente(){
-        String nome = view.getTxtEntradaNomeCadastrar().getText();
-        String cpf = view.getTxtEntradaCPFCadastrar().getText();
-        String senha = view.getTxtEntradaSenhaCadastrar().getText();
-        Cliente cliente = new Cliente(cpf, null, 0.0,
-                nome, senha);
+    public void valorInicial(){
+        Cliente cliente = new Cliente(cpf, null,
+                Double.parseDouble(view.getTxtEntradaValorInicialCriar().getText()),
+                null, null);
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();
             ClienteDAO dao = new ClienteDAO(conn);
-            dao.inserirCliente(cliente);
+            dao.escolherSaldo(cliente);
             JOptionPane.showMessageDialog(view,
-                    "Cliente Cadastrado","Aviso",
+                    "Saldo Aberto","Aviso",
                     JOptionPane.INFORMATION_MESSAGE);
             view.setVisible(false);
         }catch(SQLException ex){
@@ -38,7 +37,6 @@ public class ControllerCadastroCliente {
                     "Erro",JOptionPane.ERROR_MESSAGE);
             view.setVisible(false);
         }
-        
     }
     
 }

@@ -4,6 +4,11 @@
  */
 package view;
 
+import controller.ControllerEscolherContaCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import model.Cliente;
+
 /**
  *
  * @author iago2
@@ -13,8 +18,41 @@ public class EscolherConta extends javax.swing.JFrame {
     /**
      * Creates new form EscolherConta
      */
-    public EscolherConta() {
+    public EscolherConta(Cliente cliente) {
         initComponents();
+        controller = new ControllerEscolherContaCliente(this, cliente.getCpf());
+    }
+
+    public JButton getBtContaCorrenteCriar() {
+        return btContaCorrenteCriar;
+    }
+
+    public void setBtContaCorrenteCriar(JButton btContaCorrenteCriar) {
+        this.btContaCorrenteCriar = btContaCorrenteCriar;
+    }
+
+    public JButton getBtContaPoupancaCriar() {
+        return btContaPoupancaCriar;
+    }
+
+    public void setBtContaPoupancaCriar(JButton btContaPoupancaCriar) {
+        this.btContaPoupancaCriar = btContaPoupancaCriar;
+    }
+
+    public JButton getBtContaSalarioCriar() {
+        return btContaSalarioCriar;
+    }
+
+    public void setBtContaSalarioCriar(JButton btContaSalarioCriar) {
+        this.btContaSalarioCriar = btContaSalarioCriar;
+    }
+
+    public JLabel getLbCriarConta() {
+        return lbCriarConta;
+    }
+
+    public void setLbCriarConta(JLabel lbCriarConta) {
+        this.lbCriarConta = lbCriarConta;
     }
 
     /**
@@ -41,10 +79,25 @@ public class EscolherConta extends javax.swing.JFrame {
         lbCriarConta.setText("Criar Conta");
 
         btContaPoupancaCriar.setText("Conta Poupança");
+        btContaPoupancaCriar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btContaPoupancaCriarActionPerformed(evt);
+            }
+        });
 
         btContaCorrenteCriar.setText("Conta Corrente");
+        btContaCorrenteCriar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btContaCorrenteCriarActionPerformed(evt);
+            }
+        });
 
         btContaSalarioCriar.setText("Conta Salário");
+        btContaSalarioCriar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btContaSalarioCriarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,6 +128,21 @@ public class EscolherConta extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btContaPoupancaCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btContaPoupancaCriarActionPerformed
+        // TODO add your handling code here:
+        controller.contaPoupanca();
+    }//GEN-LAST:event_btContaPoupancaCriarActionPerformed
+
+    private void btContaCorrenteCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btContaCorrenteCriarActionPerformed
+        // TODO add your handling code here:
+        controller.contaCorrente();
+    }//GEN-LAST:event_btContaCorrenteCriarActionPerformed
+
+    private void btContaSalarioCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btContaSalarioCriarActionPerformed
+        // TODO add your handling code here:
+        controller.contaSalario();
+    }//GEN-LAST:event_btContaSalarioCriarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,6 +179,8 @@ public class EscolherConta extends javax.swing.JFrame {
 //        });
 //    }
 
+    private ControllerEscolherContaCliente controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btContaCorrenteCriar;
     private javax.swing.JButton btContaCorrenteCriar1;

@@ -4,39 +4,32 @@
  */
 package view;
 
-import controller.ControllerCriarContaCliente;
+import controller.ControllerValorInicialCliente;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import model.Cliente;
 
 /**
  *
  * @author iago2
  */
-public class CriarConta extends javax.swing.JFrame {
+public class ValorInicial extends javax.swing.JFrame {
 
     /**
-     * Creates new form CriarConta
+     * Creates new form ValorInicial
      */
-    public CriarConta() {
+    public ValorInicial(Cliente cliente) {
         initComponents();
-        controller = new ControllerCriarContaCliente(this);
+        controller = new ControllerValorInicialCliente(this, cliente.getCpf());
     }
 
-    public JButton getBtCriar() {
-        return btCriar;
+    public JButton getBtCriarConta() {
+        return btCriarConta;
     }
 
-    public void setBtCriar(JButton btCriar) {
-        this.btCriar = btCriar;
-    }
-
-    public JLabel getLbCPF() {
-        return lbCPF;
-    }
-
-    public void setLbCPF(JLabel lbCPF) {
-        this.lbCPF = lbCPF;
+    public void setBtCriarConta(JButton btCriarConta) {
+        this.btCriarConta = btCriarConta;
     }
 
     public JLabel getLbCriarConta() {
@@ -47,12 +40,20 @@ public class CriarConta extends javax.swing.JFrame {
         this.lbCriarConta = lbCriarConta;
     }
 
-    public JTextField getTxtEntradaCPFCriar() {
-        return txtEntradaCPFCriar;
+    public JLabel getLbValorInicial() {
+        return lbValorInicial;
     }
 
-    public void setTxtEntradaCPFCriar(JTextField txtEntradaCPFCriar) {
-        this.txtEntradaCPFCriar = txtEntradaCPFCriar;
+    public void setLbValorInicial(JLabel lbValorInicial) {
+        this.lbValorInicial = lbValorInicial;
+    }
+
+    public JTextField getTxtEntradaValorInicialCriar() {
+        return txtEntradaValorInicialCriar;
+    }
+
+    public void setTxtEntradaValorInicialCriar(JTextField txtEntradaValorInicialCriar) {
+        this.txtEntradaValorInicialCriar = txtEntradaValorInicialCriar;
     }
 
     /**
@@ -65,9 +66,9 @@ public class CriarConta extends javax.swing.JFrame {
     private void initComponents() {
 
         lbCriarConta = new javax.swing.JLabel();
-        lbCPF = new javax.swing.JLabel();
-        txtEntradaCPFCriar = new javax.swing.JTextField();
-        btCriar = new javax.swing.JButton();
+        lbValorInicial = new javax.swing.JLabel();
+        txtEntradaValorInicialCriar = new javax.swing.JTextField();
+        btCriarConta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -75,15 +76,20 @@ public class CriarConta extends javax.swing.JFrame {
         lbCriarConta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbCriarConta.setText("Criar Conta");
 
-        lbCPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbCPF.setText("CPF:");
+        lbValorInicial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbValorInicial.setText("Valor inicial:");
 
-        txtEntradaCPFCriar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        btCriar.setText("Criar");
-        btCriar.addActionListener(new java.awt.event.ActionListener() {
+        txtEntradaValorInicialCriar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaValorInicialCriar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btCriarActionPerformed(evt);
+                txtEntradaValorInicialCriarActionPerformed(evt);
+            }
+        });
+
+        btCriarConta.setText("Criar");
+        btCriarConta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCriarContaActionPerformed(evt);
             }
         });
 
@@ -92,19 +98,19 @@ public class CriarConta extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbCriarConta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btCriarConta)
+                .addGap(163, 163, 163))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(187, 187, 187)
-                        .addComponent(lbCPF))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(150, 150, 150)
-                        .addComponent(txtEntradaCPFCriar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtEntradaValorInicialCriar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addComponent(lbValorInicial)))
                 .addContainerGap(150, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btCriar)
-                .addGap(163, 163, 163))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,21 +118,25 @@ public class CriarConta extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addComponent(lbCriarConta)
                 .addGap(38, 38, 38)
-                .addComponent(lbCPF)
+                .addComponent(lbValorInicial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtEntradaCPFCriar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEntradaValorInicialCriar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btCriar)
+                .addComponent(btCriarConta)
                 .addContainerGap(97, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCriarActionPerformed
+    private void txtEntradaValorInicialCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEntradaValorInicialCriarActionPerformed
         // TODO add your handling code here:
-        controller.criarConta();
-    }//GEN-LAST:event_btCriarActionPerformed
+    }//GEN-LAST:event_txtEntradaValorInicialCriarActionPerformed
+
+    private void btCriarContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCriarContaActionPerformed
+        // TODO add your handling code here:
+        controller.valorInicial();
+    }//GEN-LAST:event_btCriarContaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,30 +155,30 @@ public class CriarConta extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(CriarConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(ValorInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(CriarConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(ValorInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(CriarConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(ValorInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(CriarConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(ValorInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
 //
 //        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                new CriarConta().setVisible(true);
+//                new ValorInicial().setVisible(true);
 //            }
 //        });
 //    }
     
-    private ControllerCriarContaCliente controller;
+    private ControllerValorInicialCliente controller;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btCriar;
-    private javax.swing.JLabel lbCPF;
+    private javax.swing.JButton btCriarConta;
     private javax.swing.JLabel lbCriarConta;
-    private javax.swing.JTextField txtEntradaCPFCriar;
+    private javax.swing.JLabel lbValorInicial;
+    private javax.swing.JTextField txtEntradaValorInicialCriar;
     // End of variables declaration//GEN-END:variables
 }

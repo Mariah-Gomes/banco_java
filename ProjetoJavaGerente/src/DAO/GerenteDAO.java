@@ -24,11 +24,28 @@ public class GerenteDAO {
         return resultado;
     }
     
+    public ResultSet consultarGerenteLogin(Gerente gerente) throws SQLException{
+        String sql = "select * from gerentes where login = ?";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(1, gerente.getLogin());
+        statement.execute();
+        ResultSet resultado = statement.getResultSet();
+        return resultado;
+    }
+    
     public void inserirGerente(Gerente gerente) throws SQLException{
         String sql = "insert into gerentes (nome, login, senha) values ('" +
                 gerente.getNome() + "','" + gerente.getLogin()+ "','" + 
                 gerente.getSenha() + "')";
         PreparedStatement statement = conn.prepareStatement(sql);
+        statement.execute();
+        conn.close();
+    }
+    
+    public void removerGerente(Gerente gerente) throws SQLException{
+        String sql = "delete from gerentes where login = ?";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(1, gerente.getLogin());
         statement.execute();
         conn.close();
     }

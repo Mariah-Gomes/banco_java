@@ -89,7 +89,7 @@ public class MenuGerente extends javax.swing.JFrame {
         btExibirSaldo = new javax.swing.JButton();
         lbMenuGerente = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btCadastrarCliente.setText("Cadastrar Cliente");
         btCadastrarCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +183,7 @@ public class MenuGerente extends javax.swing.JFrame {
 
     private void btExibirContasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirContasActionPerformed
         // TODO add your handling code here:
+        controller.entrarExibirContas();
     }//GEN-LAST:event_btExibirContasActionPerformed
 
     private void btExibirSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirSaldoActionPerformed

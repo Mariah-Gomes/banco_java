@@ -8,6 +8,7 @@ import view.CadastroGerente;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
+import view.LoginGerente;
 
 public class ControllerCadastroGerente {
     
@@ -30,6 +31,7 @@ public class ControllerCadastroGerente {
             JOptionPane.showMessageDialog(view,
                     "Gerente Cadastrado","Aviso",
                     JOptionPane.INFORMATION_MESSAGE);
+            view.setVisible(false);
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(view,
                     "Falha na conexão",

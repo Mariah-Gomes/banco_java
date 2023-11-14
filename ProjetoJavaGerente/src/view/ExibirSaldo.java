@@ -4,6 +4,11 @@
  */
 package view;
 
+import controller.ControllerExibirSaldoCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author iago2
@@ -15,6 +20,39 @@ public class ExibirSaldo extends javax.swing.JFrame {
      */
     public ExibirSaldo() {
         initComponents();
+        controller = new ControllerExibirSaldoCliente(this);
+    }
+
+    public JButton getBtExibir() {
+        return btExibir;
+    }
+
+    public void setBtExibir(JButton btExibir) {
+        this.btExibir = btExibir;
+    }
+
+    public JLabel getLbCPF() {
+        return lbCPF;
+    }
+
+    public void setLbCPF(JLabel lbCPF) {
+        this.lbCPF = lbCPF;
+    }
+
+    public JLabel getLbExibirSaldo() {
+        return lbExibirSaldo;
+    }
+
+    public void setLbExibirSaldo(JLabel lbExibirSaldo) {
+        this.lbExibirSaldo = lbExibirSaldo;
+    }
+
+    public JTextField getTxtEntradaCPFExibir() {
+        return txtEntradaCPFExibir;
+    }
+
+    public void setTxtEntradaCPFExibir(JTextField txtEntradaCPFExibir) {
+        this.txtEntradaCPFExibir = txtEntradaCPFExibir;
     }
 
     /**
@@ -43,6 +81,11 @@ public class ExibirSaldo extends javax.swing.JFrame {
         txtEntradaCPFExibir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         btExibir.setText("Exibir");
+        btExibir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExibirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,6 +122,11 @@ public class ExibirSaldo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btExibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirActionPerformed
+        // TODO add your handling code here:
+        controller.entrarExibirSaldo();
+    }//GEN-LAST:event_btExibirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -114,6 +162,8 @@ public class ExibirSaldo extends javax.swing.JFrame {
 //        });
 //    }
 
+    private ControllerExibirSaldoCliente controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btExibir;
     private javax.swing.JLabel lbCPF;

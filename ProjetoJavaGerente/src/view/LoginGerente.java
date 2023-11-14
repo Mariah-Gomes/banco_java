@@ -107,8 +107,9 @@ public class LoginGerente extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         Opcoes = new javax.swing.JMenu();
         NovoGerente = new javax.swing.JMenuItem();
+        ExcluirGerente = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lbLogin.setText("Login:");
 
@@ -144,6 +145,14 @@ public class LoginGerente extends javax.swing.JFrame {
             }
         });
         Opcoes.add(NovoGerente);
+
+        ExcluirGerente.setText("Excluir gerente");
+        ExcluirGerente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExcluirGerenteActionPerformed(evt);
+            }
+        });
+        Opcoes.add(ExcluirGerente);
 
         jMenuBar1.add(Opcoes);
 
@@ -203,6 +212,12 @@ public class LoginGerente extends javax.swing.JFrame {
         cg.setVisible(true);
     }//GEN-LAST:event_NovoGerenteActionPerformed
 
+    private void ExcluirGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirGerenteActionPerformed
+        // TODO add your handling code here:
+        ExcluirGerente eg = new ExcluirGerente();
+        eg.setVisible(true);
+    }//GEN-LAST:event_ExcluirGerenteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -241,6 +256,7 @@ public class LoginGerente extends javax.swing.JFrame {
     private ControllerLoginGerente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem ExcluirGerente;
     private javax.swing.JMenuItem NovoGerente;
     private javax.swing.JMenu Opcoes;
     private javax.swing.JButton btEntrar;
