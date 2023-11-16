@@ -10,4 +10,8 @@ public class Salario extends TipoConta{
         super(taxa, atributoLimite);
     }
     
+    public String salario(){
+        return "Salário";
+    }
+    
 }

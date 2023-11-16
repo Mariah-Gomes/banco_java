@@ -10,4 +10,8 @@ public class Corrente extends TipoConta{
         super(taxa, atributoLimite);
     }
     
+    public String corrente(){
+        return "Corrente";
+    }
+    
 }

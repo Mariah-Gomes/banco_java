@@ -10,4 +10,8 @@ public class Poupanca extends TipoConta{
         super(taxa, atributoLimite);
     }
     
+    public String poupanca(){
+        return "Poupança";
+    }
+    
 }

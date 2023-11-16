@@ -8,6 +8,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import view.ValorInicial;
+import model.Poupanca;
+import model.Corrente;
+import model.Salario;
 
 public class ControllerEscolherContaCliente {
     
@@ -20,7 +23,8 @@ public class ControllerEscolherContaCliente {
     }
     
     public void contaPoupanca(){
-        Cliente cliente = new Cliente(cpf, "Poupança", 0.0,
+        Poupanca p = new Poupanca();
+        Cliente cliente = new Cliente(cpf, p.poupanca(), 0.0,
                 null, null);
         Conexao conexao = new Conexao();
         try{
@@ -44,7 +48,8 @@ public class ControllerEscolherContaCliente {
     }
     
     public void contaCorrente(){
-        Cliente cliente = new Cliente(cpf, "Corrente", 0.0,
+        Corrente c = new Corrente();
+        Cliente cliente = new Cliente(cpf, c.corrente(), 0.0,
                 null, null);
         Conexao conexao = new Conexao();
         try{
@@ -68,7 +73,8 @@ public class ControllerEscolherContaCliente {
     }
     
     public void contaSalario(){
-        Cliente cliente = new Cliente(cpf, "Salário", 0.0,
+        Salario s = new Salario();
+        Cliente cliente = new Cliente(cpf, s.salario(), 0.0,
                 null, null);
         Conexao conexao = new Conexao();
         try{
