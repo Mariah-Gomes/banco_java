@@ -4,13 +4,7 @@
  */
 package view;
 
-import controller.ControllerDebitoClienteTipoDeConta;
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import model.Cliente;
-import model.Salario;
-import model.Poupanca;
-import model.Corrente;
 
 /**
  *
@@ -46,11 +40,6 @@ public class DebitarClienteConta extends javax.swing.JFrame {
 
         butContaPoupanca.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         butContaPoupanca.setText("Conta Poupança");
-        butContaPoupanca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butContaPoupancaActionPerformed(evt);
-            }
-        });
 
         butContaPoupanca1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         butContaPoupanca1.setText("Conta Corrente");
@@ -63,11 +52,6 @@ public class DebitarClienteConta extends javax.swing.JFrame {
 
         butContaPoupanca2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         butContaPoupanca2.setText("Conta Salário");
-        butContaPoupanca2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butContaPoupanca2ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,17 +88,8 @@ public class DebitarClienteConta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butContaPoupanca1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butContaPoupanca1ActionPerformed
-        //controllerdebitotipoconta.corrente();
+        // TODO add your handling code here:
     }//GEN-LAST:event_butContaPoupanca1ActionPerformed
-
-    private void butContaPoupancaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butContaPoupancaActionPerformed
-       //controllerdebitotipoconta.poupanca();
-    }//GEN-LAST:event_butContaPoupancaActionPerformed
-
-    private void butContaPoupanca2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butContaPoupanca2ActionPerformed
-        controllerdebitotipoconta.tipoContaDebitoCliente();
-        //salario.calculoTaxaDebitoSalario();
-    }//GEN-LAST:event_butContaPoupanca2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,74 +126,6 @@ public class DebitarClienteConta extends javax.swing.JFrame {
 //        });
 //    }
 
-    public JButton getButContaPoupanca() {
-        return butContaPoupanca;
-    }
-
-    public void setButContaPoupanca(JButton butContaPoupanca) {
-        this.butContaPoupanca = butContaPoupanca;
-    }
-
-    public JButton getButContaPoupanca1() {
-        return butContaPoupanca1;
-    }
-
-    public void setButContaPoupanca1(JButton butContaPoupanca1) {
-        this.butContaPoupanca1 = butContaPoupanca1;
-    }
-
-    public JButton getButContaPoupanca2() {
-        return butContaPoupanca2;
-    }
-
-    public void setButContaPoupanca2(JButton butContaPoupanca2) {
-        this.butContaPoupanca2 = butContaPoupanca2;
-    }
-
-    public JLabel getTituloDebitarCliente2() {
-        return tituloDebitarCliente2;
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(debitarClienteConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(debitarClienteConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(debitarClienteConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(debitarClienteConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new debitarClienteConta().setVisible(true);
-//            }
-//        });
-//    }
-    public void setTituloDebitarCliente2(JLabel tituloDebitarCliente2) {
-        this.tituloDebitarCliente2 = tituloDebitarCliente2;
-    }
-    
-    private ControllerDebitoClienteTipoDeConta controllerdebitotipoconta;
-    private Salario salario;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butContaPoupanca;
     private javax.swing.JButton butContaPoupanca1;

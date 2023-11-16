@@ -1,16 +1,19 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package view;
 
-import controller.ControllerDebitoCliente;
-import model.Cliente;
-import controller.ControllerDebitoClienteValor;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-
+/**
+ *
+ * @author unifmgomes
+ */
 public class DebitarClienteValor extends javax.swing.JFrame {
 
-    public DebitarClienteValor(Cliente cliente) {
+    /**
+     * Creates new form debitarClienteValor
+     */
+    public DebitarClienteValor() {
         initComponents();
     }
 
@@ -45,11 +48,6 @@ public class DebitarClienteValor extends javax.swing.JFrame {
 
         butClienteDebitar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         butClienteDebitar.setText("Debitar");
-        butClienteDebitar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butClienteDebitarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,10 +87,6 @@ public class DebitarClienteValor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_valorCienteDebitarEntradaActionPerformed
 
-    private void butClienteDebitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteDebitarActionPerformed
-        controllerDebitoValor.debitar();
-    }//GEN-LAST:event_butClienteDebitarActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -128,47 +122,7 @@ public class DebitarClienteValor extends javax.swing.JFrame {
 //            }
 //        });
 //    }
-    private ControllerDebitoClienteValor controllerDebitoValor; 
 
-    public ControllerDebitoClienteValor getControllerDebitoValor() {
-        return controllerDebitoValor;
-    }
-
-    public void setControllerDebitoValor(ControllerDebitoClienteValor controllerDebitoValor) {
-        this.controllerDebitoValor = controllerDebitoValor;
-    }
-
-    public JButton getButClienteDebitar() {
-        return butClienteDebitar;
-    }
-
-    public void setButClienteDebitar(JButton butClienteDebitar) {
-        this.butClienteDebitar = butClienteDebitar;
-    }
-
-    public JLabel getTituloDebiarCliente3() {
-        return tituloDebiarCliente3;
-    }
-
-    public void setTituloDebiarCliente3(JLabel tituloDebiarCliente3) {
-        this.tituloDebiarCliente3 = tituloDebiarCliente3;
-    }
-
-    public JTextField getValorCienteDebitarEntrada() {
-        return valorCienteDebitarEntrada;
-    }
-
-    public void setValorCienteDebitarEntrada(JTextField valorCienteDebitarEntrada) {
-        this.valorCienteDebitarEntrada = valorCienteDebitarEntrada;
-    }
-
-    public JLabel getValorClienteDebitarTXT() {
-        return valorClienteDebitarTXT;
-    }
-
-    public void setValorClienteDebitarTXT(JLabel valorClienteDebitarTXT) {
-        this.valorClienteDebitarTXT = valorClienteDebitarTXT;
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteDebitar;
     private javax.swing.JLabel tituloDebiarCliente3;

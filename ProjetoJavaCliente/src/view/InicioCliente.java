@@ -6,7 +6,6 @@ import controller.ControllerDebitoCliente;
 import controller.ControllerInicioCliente;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import model.Cliente;
 
 
 public class InicioCliente extends javax.swing.JFrame {
@@ -14,9 +13,9 @@ public class InicioCliente extends javax.swing.JFrame {
     /**
      * Creates new form InicioCliente
      */
-    public InicioCliente (Cliente cliente) {
+    public InicioCliente () {
         initComponents();
-        controlInicioCliente = new ControllerInicioCliente(this);
+        
     }
 
     /**
@@ -112,19 +111,23 @@ public class InicioCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void depositarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositarClienteActionPerformed
-        controlInicioCliente.depositarCliente();
+        DepositarCliente depositarcliente = new DepositarCliente();
+        depositarcliente.setVisible(true);
     }//GEN-LAST:event_depositarClienteActionPerformed
 
     private void debitarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debitarCliente1ActionPerformed
-        controlInicioCliente.debitarCliente();
+        DebitarCliente debitarcliente = new DebitarCliente();
+        debitarcliente.setVisible(true);
     }//GEN-LAST:event_debitarCliente1ActionPerformed
 
     private void exiberSaldoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exiberSaldoClienteActionPerformed
-        controlInicioCliente.exibirSaldoCliente();
+        ExibirSaldoCliente exibirsaldocliente = new ExibirSaldoCliente();
+        exibirsaldocliente.setVisible(true);
     }//GEN-LAST:event_exiberSaldoClienteActionPerformed
 
     private void debitarCliente3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debitarCliente3ActionPerformed
-        controlInicioCliente.exibirExtratoCliente();
+        ExibirExtratoCliente exibirextratocliente = new ExibirExtratoCliente();
+        exibirextratocliente.setVisible(true);
     }//GEN-LAST:event_debitarCliente3ActionPerformed
 
     /**

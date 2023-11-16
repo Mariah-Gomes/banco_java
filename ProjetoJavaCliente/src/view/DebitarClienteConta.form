@@ -74,9 +74,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Conta Poupan&#xe7;a"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butContaPoupancaActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="butContaPoupanca1">
       <Properties>
@@ -97,9 +94,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Conta Sal&#xe1;rio"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butContaPoupanca2ActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>
