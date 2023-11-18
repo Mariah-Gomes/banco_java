@@ -10,6 +10,7 @@ public class Poupanca extends TipoConta{
         super(taxa, atributoLimite);
     }
     
+    // Função para retornar o nome da conta.
     public String poupanca(){
         return "Poupança";
     }

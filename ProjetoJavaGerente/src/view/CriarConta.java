@@ -163,6 +163,7 @@ public class CriarConta extends javax.swing.JFrame {
 //        });
 //    }
     
+    // Instânciando controller.
     private ControllerCriarContaCliente controller;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -19,22 +19,36 @@ public class ControllerExcluirCliente {
     }
 
     public void excluirCliente(){
-        Cliente cliente = new Cliente(view.getTxtEntradaCPFExcluir().getText());
+        // Recebendo os valores do usuário pelas as entradas de dados do GUI.
+        // E, instânciando um novo objeto Cliente.
+        Cliente cliente = new Cliente(
+                view.getTxtEntradaCPFExcluir().getText());
         Conexao conexao = new Conexao();
         try{
+            // Utilizando as váriaveis de conexão.
             Connection conn = conexao.getConnection();
             ClienteDAO dao = new ClienteDAO(conn);
+            // Verificando a existência do cliente para exclusão.
             ResultSet res = dao.consultarCliente(cliente);
             if(res.next()){
+                // Excluindo cliente.
                 dao.removerCliente(cliente);
-                JOptionPane.showMessageDialog(view, "Cliente Excluído", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(view,
+                        "Cliente Excluído", "Aviso", 
+                        JOptionPane.INFORMATION_MESSAGE);
                 view.setVisible(false);
             }else{
-                JOptionPane.showMessageDialog(view,"Cliente não encontrado", "Erro", JOptionPane.ERROR_MESSAGE);
+                // Erro de cliente não encontrado.
+                JOptionPane.showMessageDialog(view,
+                        "Cliente não encontrado", "Erro", 
+                        JOptionPane.ERROR_MESSAGE);
                 view.setVisible(false);
             }
         }catch(SQLException e){
-            JOptionPane.showMessageDialog(view,"Erro de conexão", "Erro", JOptionPane.ERROR_MESSAGE);
+            // Erro de conexão.
+            JOptionPane.showMessageDialog(view,
+                    "Erro de conexão", "Erro", 
+                    JOptionPane.ERROR_MESSAGE);
             view.setVisible(false);
         }
     }

@@ -164,6 +164,7 @@ public class ExcluirCliente extends javax.swing.JFrame {
 //        });
 //    }
 
+    // Instânciando controller.
     private ControllerExcluirCliente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

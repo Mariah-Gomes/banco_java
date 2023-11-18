@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import model.Cliente;
+import model.Extrato;
 
 public class ClienteDAO {
     
@@ -15,7 +16,7 @@ public class ClienteDAO {
         this.conn = conn;
     }
     
-    // consultar cpf cliente (cpf)
+    // Função para consular os dados de um cliente no banco de dados (utilizando o CPF).
     public ResultSet consultarCliente(Cliente cliente) throws SQLException{
         String sql = "select * from clientes where cpf = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
@@ -25,6 +26,7 @@ public class ClienteDAO {
         return resultado;
     }
     
+    // Função para consular o saldo de um cliente no banco de dados (utilizando o CPF).
     public double consultarSaldoCliente(Cliente cliente) throws SQLException {
         String sql = "select saldo from clientes where cpf = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
@@ -37,6 +39,7 @@ public class ClienteDAO {
         return saldo;
         }
     
+    // Função para consultar os dados de todas as contas existentes no banco de dados.
     public ArrayList<Cliente> consultarContasCliente() throws SQLException{
         ArrayList<Cliente> clientesComConta = new ArrayList<>();
         String sql = "select * from clientes where conta is not null";
@@ -54,7 +57,20 @@ public class ClienteDAO {
         return clientesComConta;
     }
     
-    // cadastrar cliente (nome, cpf, senha)
+    // Função para verificar a existência de um cliente no banco de dados (utilizando o CPF).
+    public int verificarExistenciaCliente(Cliente cliente) throws SQLException {
+        String sql = "SELECT COUNT(*) AS count FROM clientes WHERE cpf = ?";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(1, cliente.getCpf());
+        ResultSet resultado = statement.executeQuery();
+        int count = 0;
+        if (resultado.next()) {
+            count = resultado.getInt("count");
+        }
+        return count > 0 ? 1 : 0;
+    }
+    
+    // Função para inserir um cliente no banco de dados.
     public void inserirCliente(Cliente cliente) throws SQLException{
         String sql = "insert into clientes (nome, cpf, senha) values ('" 
                 + cliente.getNome() + "','" + cliente.getCpf()+ "','" +
@@ -64,7 +80,21 @@ public class ClienteDAO {
         conn.close();
     }
     
-    // criar conta cliente (tipo conta)
+    // Função para inserir um extrato de um cliente no banco de dados.
+    public void inserirExtrato(Extrato extrato) throws SQLException{
+        String sql = "insert into extratos (cpf, data, hora, valor, tarifa, saldo) values (?, ?, ?, ?, ?, ?)";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(1, extrato.getCpf());
+        statement.setString(2, extrato.getData());
+        statement.setString(3, extrato.getHora());
+        statement.setDouble(4, extrato.getValor());
+        statement.setDouble(5, extrato.getTarifa());
+        statement.setDouble(6, extrato.getSaldo());
+        statement.execute();
+        conn.close();
+    }
+    
+    // Função para criar ou atualizar conta do cliente no banco de dados (utilizando o CPF).
     public void escolherConta(Cliente cliente) throws SQLException{
         String sql = "update clientes set conta = ? where cpf = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
@@ -74,6 +104,7 @@ public class ClienteDAO {
         conn.close();
     }
     
+    // Função para atualizar o saldo do cliente no banco de dados (utilizando o CPF).
     public void escolherSaldo(Cliente cliente) throws SQLException{
         String sql = "update clientes set saldo = ? where cpf = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
@@ -83,7 +114,7 @@ public class ClienteDAO {
         conn.close();
     }
     
-    // excluir cliente (cpf)
+    // Função para excluir um cliente no banco de dados (utilizando o CPF).
     public void removerCliente(Cliente cliente) throws SQLException{
         String sql = "delete from clientes where cpf = ?";
         PreparedStatement statement = conn.prepareStatement(sql);

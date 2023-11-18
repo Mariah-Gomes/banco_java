@@ -10,6 +10,7 @@ public class Corrente extends TipoConta{
         super(taxa, atributoLimite);
     }
     
+    // Função para retornar o nome da conta.
     public String corrente(){
         return "Corrente";
     }

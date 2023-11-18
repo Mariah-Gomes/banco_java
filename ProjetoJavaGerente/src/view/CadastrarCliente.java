@@ -241,6 +241,7 @@ public class CadastrarCliente extends javax.swing.JFrame {
 //        });
 //    }
 
+    // Instânciando controller.
     private ControllerCadastroCliente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

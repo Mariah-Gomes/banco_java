@@ -10,6 +10,7 @@ public class Salario extends TipoConta{
         super(taxa, atributoLimite);
     }
     
+    // Função para retornar o nome da conta.
     public String salario(){
         return "Salário";
     }

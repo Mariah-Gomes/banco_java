@@ -226,6 +226,7 @@ public class MenuGerente extends javax.swing.JFrame {
 //        });
 //    }
 
+    // Instânciando controller.
     private ControllerPaginasMenuGerente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

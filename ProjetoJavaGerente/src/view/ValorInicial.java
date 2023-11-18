@@ -173,6 +173,7 @@ public class ValorInicial extends javax.swing.JFrame {
 //        });
 //    }
     
+    // Instânciando controller.
     private ControllerValorInicialCliente controller;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

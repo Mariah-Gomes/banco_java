@@ -253,6 +253,7 @@ public class LoginGerente extends javax.swing.JFrame {
 //        });
 //    }
 
+    // Instânciando controller.
     private ControllerLoginGerente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

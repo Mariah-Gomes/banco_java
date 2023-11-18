@@ -172,6 +172,7 @@ public class ExcluirGerente extends javax.swing.JFrame {
 //        });
 //    }
 
+    // Instânciando controller.
     private ControllerExcluirGerente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

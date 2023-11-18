@@ -234,6 +234,7 @@ public class CadastroGerente extends javax.swing.JFrame {
 //        });
 //    }
 
+    // Instânciando controller.
     private ControllerCadastroGerente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

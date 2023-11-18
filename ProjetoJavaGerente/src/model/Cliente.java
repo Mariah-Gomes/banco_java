@@ -3,14 +3,19 @@ package model;
 
 public class Cliente extends Pessoa{
     
-    private String cpf, tipoConta;
-    private double saldo;
+    protected String cpf, tipoConta;
+    protected double saldo;
 
     public Cliente() {
     }
 
     public Cliente(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Cliente(String cpf, double saldo) {
+        this.cpf = cpf;
+        this.saldo = saldo;
     }
 
     public Cliente(String cpf, String tipoConta, double saldo, String nome,

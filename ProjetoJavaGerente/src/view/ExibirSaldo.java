@@ -162,6 +162,7 @@ public class ExibirSaldo extends javax.swing.JFrame {
 //        });
 //    }
 
+    // Instânciando controller.
     private ControllerExibirSaldoCliente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
