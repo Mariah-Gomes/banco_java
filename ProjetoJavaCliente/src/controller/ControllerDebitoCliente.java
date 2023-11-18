@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import model.Cliente;
 import view.DebitarCliente;
-import view.DebitarClienteConta;
+import view.DebitarClienteValor;
 
 
 public class ControllerDebitoCliente {
@@ -19,8 +19,10 @@ public class ControllerDebitoCliente {
     }
     
     public void entrarClienteDebito(){
-        Cliente cliente = new Cliente(view.getCpfClienteDebitarEntrada().getText(), 
-                null, null, view.getSenhaClienteDebitarEntrada().getText(), 0);
+        Cliente cliente = new Cliente(null, 
+                view.getCpfClienteDebitarEntrada().getText(), 
+                view.getSenhaClienteDebitarEntrada().getText(), 
+                null, 0.0);
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();
@@ -28,13 +30,14 @@ public class ControllerDebitoCliente {
             ResultSet res = dao.consultar(cliente);
             if(res.next()){
                 JOptionPane.showMessageDialog(view, "Login Feito", "Aviso", JOptionPane.INFORMATION_MESSAGE);
-                String cpf = res.getString("cpf");
-                String tipoConta = res.getString("tipo conta");
                 String nome = res.getString("nome");
+                String cpf = res.getString("cpf");
                 String senha = res.getString("senha");
-                Double valorConta = res.getDouble("valor Conta");
-                DebitarClienteConta viewDebitarClienteConta = new DebitarClienteConta(new Cliente(cpf, tipoConta, nome, senha, valorConta));
-                viewDebitarClienteConta.setVisible(true);
+                String tipoConta = res.getString("conta");
+                Double saldo = res.getDouble("saldo");
+                DebitarClienteValor viewDebitarClienteValor = new DebitarClienteValor(new Cliente(nome, cpf, senha, tipoConta, saldo));
+                ControllerDebitoClienteValor controllerDebitoValor = new ControllerDebitoClienteValor(viewDebitarClienteValor, cpf);
+                viewDebitarClienteValor.setVisible(true);
                 view.setVisible(false);
             }else{
                 JOptionPane.showMessageDialog(view,"Login não efetuado", "Erro", JOptionPane.ERROR_MESSAGE);

@@ -1,13 +1,49 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package controller;
 
-/**
- *
- * @author maria
- */
+import DAO.ClienteDAO;
+import DAO.Conexao;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import model.Cliente;
+import view.ExibirSaldoCliente;
+import view.ExibirSaldoClienteResultado;
+
 public class ControllerExibirSaldoCliente {
+    private ExibirSaldoCliente view;
+
+    public ControllerExibirSaldoCliente(ExibirSaldoCliente view) {
+        this.view = view;
+    }
     
+    public void entrarExibirSaldo(){
+        Cliente cliente = new Cliente(null, 
+                view.getCpfClienteExibirSaldoEntrada().getText(), 
+                view.getSenhaClienteExibirSaldoEntrada().getText(), 
+                null, 0.0);
+        Conexao conexao = new Conexao();
+        try{
+            Connection conn = conexao.getConnection();
+            ClienteDAO dao = new ClienteDAO(conn);
+            ResultSet res = dao.consultar(cliente);
+            if(res.next()){
+                JOptionPane.showMessageDialog(view, "Login Feito", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+                String nome = res.getString("nome");
+                String cpf = res.getString("cpf");
+                String senha = res.getString("senha");
+                String tipoConta = res.getString("conta");
+                Double saldo = res.getDouble("saldo");
+                ExibirSaldoClienteResultado viewExibirSaldoClienteResultado = new ExibirSaldoClienteResultado(new Cliente(nome, cpf, senha, tipoConta, saldo));
+                ControllerExibirSaldoResultado controllerExibirSaldoClienteResultado = new ControllerExibirSaldoResultado(viewExibirSaldoClienteResultado, cpf);
+                viewExibirSaldoClienteResultado.setVisible(true);
+                view.setVisible(false);
+            }else{
+                JOptionPane.showMessageDialog(view,"Login não efetuado", "Erro", JOptionPane.ERROR_MESSAGE);
+            }
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(view,"Erro de conexão", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 }

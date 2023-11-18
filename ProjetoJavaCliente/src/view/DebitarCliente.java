@@ -10,6 +10,7 @@ public class DebitarCliente extends javax.swing.JFrame {
 
     public DebitarCliente() {
         initComponents();
+        controllerDebito = new ControllerDebitoCliente(this);
     }
 
 

@@ -3,20 +3,24 @@ package model;
 
 public class Cliente {
     private String cpf;
-    private String tipoConta;
+    private String conta;
     private String nome;
     private String senha;
-    private double valorConta;
+    private double saldo;
 
     public Cliente() {
     }
 
-    public Cliente(String cpf, String tipoConta, String nome, String senha, double valorConta) {
+    public Cliente(String cpf) {
         this.cpf = cpf;
-        this.tipoConta = tipoConta;
+    }
+    
+    public Cliente(String nome, String cpf, String senha, String conta, double saldo) {
+        this.cpf = cpf;
+        this.conta = conta;
         this.nome = nome;
         this.senha = senha;
-        this.valorConta = valorConta;
+        this.saldo = saldo;
     }
 
     public String getCpf() {
@@ -27,12 +31,12 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public String getTipoConta() {
-        return tipoConta;
+    public String getConta() {
+        return conta;
     }
 
-    public void setTipoConta(String tipoConta) {
-        this.tipoConta = tipoConta;
+    public void setConta(String conta) {
+        this.conta = conta;
     }
 
     public String getNome() {
@@ -51,17 +55,21 @@ public class Cliente {
         this.senha = senha;
     }
 
-    public double getValorConta() {
-        return valorConta;
+    public double getSaldo() {
+        return saldo;
     }
 
-    public void setValorConta(double valorConta) {
-        this.valorConta = valorConta;
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     @Override
     public String toString() {
-        return "Cliente{" + "cpf=" + cpf + ", tipoConta=" + tipoConta + ", nome=" + nome + ", senha=" + senha + ", valorConta=" + valorConta + '}';
+        return "Cliente{" + "nome=" + nome + ", cpf=" + cpf + ", senha=" + senha + ", conta=" + conta + ", valorConta=" + saldo + '}';
+    }
+
+    public String saldo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

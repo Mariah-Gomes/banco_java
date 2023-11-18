@@ -1,20 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
-/**
- *
- * @author unifmgomes
- */
+import controller.ControllerDebitoClienteValor;
+import controller.ControllerDepositarClienteValor;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import model.Cliente;
+
+
 public class DepositarClienteValor extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DepositarClienteValor
-     */
-    public DepositarClienteValor() {
+    
+    public DepositarClienteValor(Cliente cliente) {
         initComponents();
+        controllerDepositarValor = new ControllerDepositarClienteValor(this, cliente.getCpf());
     }
 
     /**
@@ -90,7 +90,7 @@ public class DepositarClienteValor extends javax.swing.JFrame {
     }//GEN-LAST:event_valorClienteDepositarEntradaActionPerformed
 
     private void butClienteDepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteDepositarActionPerformed
-        // TODO add your handling code here:
+        controllerDepositarValor.depositar();
     }//GEN-LAST:event_butClienteDepositarActionPerformed
 
     /**
@@ -128,6 +128,72 @@ public class DepositarClienteValor extends javax.swing.JFrame {
 //        });
 //    }
 
+    public JButton getButClienteDepositar() {
+        return butClienteDepositar;
+    }
+
+    public void setButClienteDepositar(JButton butClienteDepositar) {
+        this.butClienteDepositar = butClienteDepositar;
+    }
+
+    public JLabel getTituloDepositarCliente() {
+        return tituloDepositarCliente;
+    }
+
+    public void setTituloDepositarCliente(JLabel tituloDepositarCliente) {
+        this.tituloDepositarCliente = tituloDepositarCliente;
+    }
+
+    public JTextField getValorClienteDepositarEntrada() {
+        return valorClienteDepositarEntrada;
+    }
+
+    public void setValorClienteDepositarEntrada(JTextField valorClienteDepositarEntrada) {
+        this.valorClienteDepositarEntrada = valorClienteDepositarEntrada;
+    }
+
+    public JLabel getValorClienteDepositoTXT() {
+        return valorClienteDepositoTXT;
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(DepositarClienteValor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(DepositarClienteValor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(DepositarClienteValor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(DepositarClienteValor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new DepositarClienteValor().setVisible(true);
+//            }
+//        });
+//    }
+    public void setValorClienteDepositoTXT(JLabel valorClienteDepositoTXT) {
+        this.valorClienteDepositoTXT = valorClienteDepositoTXT;
+    }
+    private ControllerDepositarClienteValor controllerDepositarValor;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteDepositar;
     private javax.swing.JLabel tituloDepositarCliente;

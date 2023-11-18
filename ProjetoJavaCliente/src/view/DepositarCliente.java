@@ -4,6 +4,12 @@
  */
 package view;
 
+import controller.ControllerDebitoCliente;
+import controller.ControllerDepositarCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author unifmgomes
@@ -15,6 +21,7 @@ public class DepositarCliente extends javax.swing.JFrame {
      */
     public DepositarCliente() {
         initComponents();
+        controllerDeposito = new ControllerDepositarCliente(this);
     }
 
     /**
@@ -60,6 +67,11 @@ public class DepositarCliente extends javax.swing.JFrame {
 
         butClienteDepositarEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         butClienteDepositarEntrar.setText("Entrar");
+        butClienteDepositarEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butClienteDepositarEntrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,6 +117,10 @@ public class DepositarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaClienteDepositarEntrada1ActionPerformed
 
+    private void butClienteDepositarEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteDepositarEntrarActionPerformed
+        controllerDeposito.entrarClienteDeposito();
+    }//GEN-LAST:event_butClienteDepositarEntrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -139,7 +155,63 @@ public class DepositarCliente extends javax.swing.JFrame {
 //            }
 //        });
 //    }
+    private ControllerDepositarCliente controllerDeposito;
 
+    public ControllerDepositarCliente getControllerDeposito() {
+        return controllerDeposito;
+    }
+
+    public void setControllerDeposito(ControllerDepositarCliente controllerDeposito) {
+        this.controllerDeposito = controllerDeposito;
+    }
+
+    public JButton getButClienteDepositarEntrar() {
+        return butClienteDepositarEntrar;
+    }
+
+    public void setButClienteDepositarEntrar(JButton butClienteDepositarEntrar) {
+        this.butClienteDepositarEntrar = butClienteDepositarEntrar;
+    }
+
+    public JTextField getCpfClienteDepositarEntrada() {
+        return cpfClienteDepositarEntrada;
+    }
+
+    public void setCpfClienteDepositarEntrada(JTextField cpfClienteDepositarEntrada) {
+        this.cpfClienteDepositarEntrada = cpfClienteDepositarEntrada;
+    }
+
+    public JLabel getCpfClienteDepositarTXT() {
+        return cpfClienteDepositarTXT;
+    }
+
+    public void setCpfClienteDepositarTXT(JLabel cpfClienteDepositarTXT) {
+        this.cpfClienteDepositarTXT = cpfClienteDepositarTXT;
+    }
+
+    public JTextField getSenhaClienteDepositarEntrada1() {
+        return senhaClienteDepositarEntrada1;
+    }
+
+    public void setSenhaClienteDepositarEntrada1(JTextField senhaClienteDepositarEntrada1) {
+        this.senhaClienteDepositarEntrada1 = senhaClienteDepositarEntrada1;
+    }
+
+    public JLabel getSenhaClienteDepositarTXT() {
+        return senhaClienteDepositarTXT;
+    }
+
+    public void setSenhaClienteDepositarTXT(JLabel senhaClienteDepositarTXT) {
+        this.senhaClienteDepositarTXT = senhaClienteDepositarTXT;
+    }
+
+    public JLabel getTituloDepositarCliente() {
+        return tituloDepositarCliente;
+    }
+
+    public void setTituloDepositarCliente(JLabel tituloDepositarCliente) {
+        this.tituloDepositarCliente = tituloDepositarCliente;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteDepositarEntrar;
     private javax.swing.JTextField cpfClienteDepositarEntrada;

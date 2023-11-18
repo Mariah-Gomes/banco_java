@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
-/**
- *
- * @author unifmgomes
- */
+import controller.ControllerExibirExtratoCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
 public class ExibirExtratoCliente extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ExibirExtratoCliente
-     */
+    
     public ExibirExtratoCliente() {
         initComponents();
+        controlExtrato = new ControllerExibirExtratoCliente(this);
     }
 
     /**
@@ -71,6 +69,11 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
 
         butClienteExibirExtrato.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         butClienteExibirExtrato.setText("Exibir Extrato");
+        butClienteExibirExtrato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butClienteExibirExtratoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,6 +119,86 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaClienteExibirExtratoActionPerformed
 
+    private void butClienteExibirExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteExibirExtratoActionPerformed
+        controlExtrato.entrarExibirExtrato();
+    }//GEN-LAST:event_butClienteExibirExtratoActionPerformed
+
+    public ControllerExibirExtratoCliente getControlExtrato() {
+        return controlExtrato;
+    }
+
+    public void setControlExtrato(ControllerExibirExtratoCliente controlExtrato) {
+        this.controlExtrato = controlExtrato;
+    }
+
+    public JButton getButClienteExibirExtrato() {
+        return butClienteExibirExtrato;
+    }
+
+    public void setButClienteExibirExtrato(JButton butClienteExibirExtrato) {
+        this.butClienteExibirExtrato = butClienteExibirExtrato;
+    }
+
+    public JTextField getCpfClienteExibirExtrato() {
+        return cpfClienteExibirExtrato;
+    }
+
+    public void setCpfClienteExibirExtrato(JTextField cpfClienteExibirExtrato) {
+        this.cpfClienteExibirExtrato = cpfClienteExibirExtrato;
+    }
+
+    public JLabel getCpfClienteExibirExtratoTXT() {
+        return cpfClienteExibirExtratoTXT;
+    }
+
+    public void setCpfClienteExibirExtratoTXT(JLabel cpfClienteExibirExtratoTXT) {
+        this.cpfClienteExibirExtratoTXT = cpfClienteExibirExtratoTXT;
+    }
+
+    public JLabel getCpfClienteExibirSaldoTXT() {
+        return cpfClienteExibirSaldoTXT;
+    }
+
+    public void setCpfClienteExibirSaldoTXT(JLabel cpfClienteExibirSaldoTXT) {
+        this.cpfClienteExibirSaldoTXT = cpfClienteExibirSaldoTXT;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JTextField getSenhaClienteExibirExtrato() {
+        return senhaClienteExibirExtrato;
+    }
+
+    public void setSenhaClienteExibirExtrato(JTextField senhaClienteExibirExtrato) {
+        this.senhaClienteExibirExtrato = senhaClienteExibirExtrato;
+    }
+
+    public JLabel getSenhaClienteExibirExtratoTXT() {
+        return senhaClienteExibirExtratoTXT;
+    }
+
+    public void setSenhaClienteExibirExtratoTXT(JLabel senhaClienteExibirExtratoTXT) {
+        this.senhaClienteExibirExtratoTXT = senhaClienteExibirExtratoTXT;
+    }
+
+    public JLabel getTituloExibirExtratoCliente1() {
+        return tituloExibirExtratoCliente1;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -150,7 +233,11 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
 //            }
 //        });
 //    }
-
+    public void setTituloExibirExtratoCliente1(JLabel tituloExibirExtratoCliente1) {
+        this.tituloExibirExtratoCliente1 = tituloExibirExtratoCliente1;
+    }
+    private ControllerExibirExtratoCliente controlExtrato;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteExibirExtrato;
     private javax.swing.JTextField cpfClienteExibirExtrato;
