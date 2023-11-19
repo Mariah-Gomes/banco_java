@@ -4,6 +4,11 @@
  */
 package view;
 
+import controller.ControllerCadastroCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author iago2
@@ -15,6 +20,71 @@ public class CadastrarCliente extends javax.swing.JFrame {
      */
     public CadastrarCliente() {
         initComponents();
+        controller = new ControllerCadastroCliente(this);
+    }
+
+    public JButton getBtCadastrar() {
+        return btCadastrar;
+    }
+
+    public void setBtCadastrar(JButton btCadastrar) {
+        this.btCadastrar = btCadastrar;
+    }
+
+    public JLabel getLbCPF() {
+        return lbCPF;
+    }
+
+    public void setLbCPF(JLabel lbCPF) {
+        this.lbCPF = lbCPF;
+    }
+
+    public JLabel getLbCadastrarCliente() {
+        return lbCadastrarCliente;
+    }
+
+    public void setLbCadastrarCliente(JLabel lbCadastrarCliente) {
+        this.lbCadastrarCliente = lbCadastrarCliente;
+    }
+
+    public JLabel getLbNome() {
+        return lbNome;
+    }
+
+    public void setLbNome(JLabel lbNome) {
+        this.lbNome = lbNome;
+    }
+
+    public JLabel getLbSenha() {
+        return lbSenha;
+    }
+
+    public void setLbSenha(JLabel lbSenha) {
+        this.lbSenha = lbSenha;
+    }
+
+    public JTextField getTxtEntradaCPFCadastrar() {
+        return txtEntradaCPFCadastrar;
+    }
+
+    public void setTxtEntradaCPFCadastrar(JTextField txtEntradaCPFCadastrar) {
+        this.txtEntradaCPFCadastrar = txtEntradaCPFCadastrar;
+    }
+
+    public JTextField getTxtEntradaNomeCadastrar() {
+        return txtEntradaNomeCadastrar;
+    }
+
+    public void setTxtEntradaNomeCadastrar(JTextField txtEntradaNomeCadastrar) {
+        this.txtEntradaNomeCadastrar = txtEntradaNomeCadastrar;
+    }
+
+    public JTextField getTxtEntradaSenhaCadastrar() {
+        return txtEntradaSenhaCadastrar;
+    }
+
+    public void setTxtEntradaSenhaCadastrar(JTextField txtEntradaSenhaCadastrar) {
+        this.txtEntradaSenhaCadastrar = txtEntradaSenhaCadastrar;
     }
 
     /**
@@ -30,20 +100,20 @@ public class CadastrarCliente extends javax.swing.JFrame {
         txtEntradaNomeCadastrar = new javax.swing.JTextField();
         txtEntradaSenhaCadastrar = new javax.swing.JTextField();
         txtEntradaCPFCadastrar = new javax.swing.JTextField();
-        txtEntradaValorInicialCadastrar = new javax.swing.JTextField();
         lbNome = new javax.swing.JLabel();
         lbCPF = new javax.swing.JLabel();
-        lbValorInicial = new javax.swing.JLabel();
         lbSenha = new javax.swing.JLabel();
         btCadastrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        lbCadastrarCliente.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbCadastrarCliente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         lbCadastrarCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbCadastrarCliente.setText("Cadastrar Cliente");
 
         txtEntradaNomeCadastrar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaNomeCadastrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtEntradaNomeCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEntradaNomeCadastrarActionPerformed(evt);
@@ -51,89 +121,91 @@ public class CadastrarCliente extends javax.swing.JFrame {
         });
 
         txtEntradaSenhaCadastrar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaSenhaCadastrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtEntradaCPFCadastrar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaCPFCadastrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtEntradaCPFCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEntradaCPFCadastrarActionPerformed(evt);
             }
         });
 
-        txtEntradaValorInicialCadastrar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
+        lbNome.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbNome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbNome.setText("Nome:");
 
+        lbCPF.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbCPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbCPF.setText("CPF:");
         lbCPF.setToolTipText("");
 
-        lbValorInicial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbValorInicial.setText("Valor Inicial:");
-
+        lbSenha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbSenha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbSenha.setText("Senha:");
 
+        btCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btCadastrar.setText("Cadastrar");
+        btCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadastrarActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbCadastrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lbCadastrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(112, 112, 112)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(lbNome)
-                        .addGap(33, 33, 33))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
                         .addComponent(lbCPF)
-                        .addGap(38, 38, 38))
-                    .addComponent(txtEntradaCPFCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaNomeCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lbValorInicial)
-                        .addGap(19, 19, 19))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtEntradaCPFCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbNome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtEntradaNomeCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(lbSenha)
-                        .addGap(32, 32, 32))
-                    .addComponent(txtEntradaSenhaCadastrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaValorInicialCadastrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(68, 68, 68))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addComponent(btCadastrar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtEntradaSenhaCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(34, 34, 34)
                 .addComponent(lbCadastrarCliente)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbNome)
-                    .addComponent(lbValorInicial))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEntradaNomeCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaValorInicialCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbNome))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbCPF)
-                    .addComponent(lbSenha))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEntradaCPFCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaSenhaCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                    .addComponent(lbCPF))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEntradaSenhaCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbSenha))
+                .addGap(18, 18, 18)
                 .addComponent(btCadastrar)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pack();
@@ -146,6 +218,11 @@ public class CadastrarCliente extends javax.swing.JFrame {
     private void txtEntradaCPFCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEntradaCPFCadastrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEntradaCPFCadastrarActionPerformed
+
+    private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
+        // TODO add your handling code here:
+        controller.salvarCliente();
+    }//GEN-LAST:event_btCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,16 +259,18 @@ public class CadastrarCliente extends javax.swing.JFrame {
 //        });
 //    }
 
+    // Instânciando controller.
+    private ControllerCadastroCliente controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbCPF;
     private javax.swing.JLabel lbCadastrarCliente;
     private javax.swing.JLabel lbNome;
     private javax.swing.JLabel lbSenha;
-    private javax.swing.JLabel lbValorInicial;
     private javax.swing.JTextField txtEntradaCPFCadastrar;
     private javax.swing.JTextField txtEntradaNomeCadastrar;
     private javax.swing.JTextField txtEntradaSenhaCadastrar;
-    private javax.swing.JTextField txtEntradaValorInicialCadastrar;
     // End of variables declaration//GEN-END:variables
 }

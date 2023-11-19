@@ -4,7 +4,7 @@
  */
 package view;
 
-import controller.ControllerExcluirCliente;
+import controller.ControllerExcluirGerente;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -13,15 +13,14 @@ import javax.swing.JTextField;
  *
  * @author iago2
  */
-public class ExcluirCliente extends javax.swing.JFrame {
+public class ExcluirGerente extends javax.swing.JFrame {
 
     /**
-     * Creates new form ExcluirCliente
+     * Creates new form ExcluirGerente
      */
-
-    public ExcluirCliente() {
+    public ExcluirGerente() {
         initComponents();
-        controller = new ControllerExcluirCliente(this);
+        controller = new ControllerExcluirGerente(this);
     }
 
     public JButton getBtExcluir() {
@@ -32,30 +31,30 @@ public class ExcluirCliente extends javax.swing.JFrame {
         this.btExcluir = btExcluir;
     }
 
-    public JLabel getLbCPF() {
-        return lbCPF;
+    public JLabel getLbExcluirGerente() {
+        return lbExcluirGerente;
     }
 
-    public void setLbCPF(JLabel lbCPF) {
-        this.lbCPF = lbCPF;
+    public void setLbExcluirGerente(JLabel lbExcluirGerente) {
+        this.lbExcluirGerente = lbExcluirGerente;
     }
 
-    public JLabel getLbExcluirCliente() {
-        return lbExcluirCliente;
+    public JLabel getLbLoginExcluirGerente() {
+        return lbLoginExcluirGerente;
     }
 
-    public void setLbExcluirCliente(JLabel lbExcluirCliente) {
-        this.lbExcluirCliente = lbExcluirCliente;
+    public void setLbLoginExcluirGerente(JLabel lbLoginExcluirGerente) {
+        this.lbLoginExcluirGerente = lbLoginExcluirGerente;
     }
 
-    public JTextField getTxtEntradaCPFExcluir() {
-        return txtEntradaCPFExcluir;
+    public JTextField getTxtEntradaLoginExcluir() {
+        return txtEntradaLoginExcluir;
     }
 
-    public void setTxtEntradaCPFExcluir(JTextField txtEntradaCPFExcluir) {
-        this.txtEntradaCPFExcluir = txtEntradaCPFExcluir;
+    public void setTxtEntradaLoginExcluir(JTextField txtEntradaLoginExcluir) {
+        this.txtEntradaLoginExcluir = txtEntradaLoginExcluir;
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -65,24 +64,29 @@ public class ExcluirCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbExcluirCliente = new javax.swing.JLabel();
-        lbCPF = new javax.swing.JLabel();
-        txtEntradaCPFExcluir = new javax.swing.JTextField();
+        lbExcluirGerente = new javax.swing.JLabel();
+        lbLoginExcluirGerente = new javax.swing.JLabel();
+        txtEntradaLoginExcluir = new javax.swing.JTextField();
         btExcluir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        lbExcluirCliente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
-        lbExcluirCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbExcluirCliente.setText("Excluir Cliente");
+        lbExcluirGerente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
+        lbExcluirGerente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbExcluirGerente.setText("Excluir Gerente");
 
-        lbCPF.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbCPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbCPF.setText("CPF:");
+        lbLoginExcluirGerente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbLoginExcluirGerente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbLoginExcluirGerente.setText("Login:");
 
-        txtEntradaCPFExcluir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtEntradaCPFExcluir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEntradaLoginExcluir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaLoginExcluir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEntradaLoginExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEntradaLoginExcluirActionPerformed(evt);
+            }
+        });
 
         btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btExcluir.setText("Excluir");
@@ -100,7 +104,7 @@ public class ExcluirCliente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbExcluirCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lbExcluirGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -109,13 +113,13 @@ public class ExcluirCliente extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(187, 187, 187)
-                                .addComponent(lbCPF))
+                                .addGap(182, 182, 182)
+                                .addComponent(lbLoginExcluirGerente))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(150, 150, 150)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtEntradaCPFExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtEntradaLoginExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 144, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -124,15 +128,15 @@ public class ExcluirCliente extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(56, 56, 56)
-                .addComponent(lbExcluirCliente)
+                .addGap(54, 54, 54)
+                .addComponent(lbExcluirGerente)
                 .addGap(18, 18, 18)
-                .addComponent(lbCPF)
+                .addComponent(lbLoginExcluirGerente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtEntradaCPFExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEntradaLoginExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btExcluir)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
@@ -140,8 +144,12 @@ public class ExcluirCliente extends javax.swing.JFrame {
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
         // TODO add your handling code here:
-        controller.excluirCliente();
+        controller.excluirGerente();
     }//GEN-LAST:event_btExcluirActionPerformed
+
+    private void txtEntradaLoginExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEntradaLoginExcluirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEntradaLoginExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,32 +168,32 @@ public class ExcluirCliente extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(ExcluirCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(ExcluirGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(ExcluirCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(ExcluirGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(ExcluirCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(ExcluirGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(ExcluirCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(ExcluirGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
 //
 //        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                new ExcluirCliente().setVisible(true);
+//                new ExcluirGerente().setVisible(true);
 //            }
 //        });
 //    }
 
     // Instânciando controller.
-    private ControllerExcluirCliente controller;
+    private ControllerExcluirGerente controller;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btExcluir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lbCPF;
-    private javax.swing.JLabel lbExcluirCliente;
-    private javax.swing.JTextField txtEntradaCPFExcluir;
+    private javax.swing.JLabel lbExcluirGerente;
+    private javax.swing.JLabel lbLoginExcluirGerente;
+    private javax.swing.JTextField txtEntradaLoginExcluir;
     // End of variables declaration//GEN-END:variables
 }
