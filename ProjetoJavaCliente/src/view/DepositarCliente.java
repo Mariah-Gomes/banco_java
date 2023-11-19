@@ -39,33 +39,36 @@ public class DepositarCliente extends javax.swing.JFrame {
         cpfClienteDepositarEntrada = new javax.swing.JTextField();
         senhaClienteDepositarEntrada1 = new javax.swing.JTextField();
         butClienteDepositarEntrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloDepositarCliente.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloDepositarCliente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloDepositarCliente.setText("Depositar:");
 
-        cpfClienteDepositarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cpfClienteDepositarTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cpfClienteDepositarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cpfClienteDepositarTXT.setText("CPF:");
 
-        senhaClienteDepositarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        senhaClienteDepositarTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         senhaClienteDepositarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         senhaClienteDepositarTXT.setText("Senha:");
 
+        cpfClienteDepositarEntrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cpfClienteDepositarEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfClienteDepositarEntradaActionPerformed(evt);
             }
         });
 
+        senhaClienteDepositarEntrada1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         senhaClienteDepositarEntrada1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaClienteDepositarEntrada1ActionPerformed(evt);
             }
         });
 
-        butClienteDepositarEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteDepositarEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         butClienteDepositarEntrar.setText("Entrar");
         butClienteDepositarEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,37 +76,57 @@ public class DepositarCliente extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(144, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(cpfClienteDepositarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tituloDepositarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cpfClienteDepositarEntrada)
-                    .addComponent(senhaClienteDepositarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(senhaClienteDepositarEntrada1)
-                    .addComponent(butClienteDepositarEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(152, 152, 152))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(118, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(cpfClienteDepositarTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(senhaClienteDepositarTXT))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cpfClienteDepositarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(senhaClienteDepositarEntrada1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(131, 131, 131))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addComponent(butClienteDepositarEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(tituloDepositarCliente)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(21, 21, 21)
                 .addComponent(tituloDepositarCliente)
-                .addGap(43, 43, 43)
-                .addComponent(cpfClienteDepositarTXT)
-                .addGap(4, 4, 4)
-                .addComponent(cpfClienteDepositarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cpfClienteDepositarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfClienteDepositarTXT))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(senhaClienteDepositarTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senhaClienteDepositarEntrada1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(senhaClienteDepositarTXT)
+                    .addComponent(senhaClienteDepositarEntrada1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(butClienteDepositarEntrar)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         pack();
@@ -216,6 +239,7 @@ public class DepositarCliente extends javax.swing.JFrame {
     private javax.swing.JButton butClienteDepositarEntrar;
     private javax.swing.JTextField cpfClienteDepositarEntrada;
     private javax.swing.JLabel cpfClienteDepositarTXT;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField senhaClienteDepositarEntrada1;
     private javax.swing.JLabel senhaClienteDepositarTXT;
     private javax.swing.JLabel tituloDepositarCliente;

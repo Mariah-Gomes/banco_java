@@ -30,30 +30,36 @@ public class DepositarClienteValor extends javax.swing.JFrame {
         valorClienteDepositoTXT = new javax.swing.JLabel();
         valorClienteDepositarEntrada = new javax.swing.JTextField();
         butClienteDepositar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloDepositarCliente.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloDepositarCliente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloDepositarCliente.setText("Depositar:");
 
-        valorClienteDepositoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        valorClienteDepositoTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         valorClienteDepositoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorClienteDepositoTXT.setText("Valor:");
 
         valorClienteDepositarEntrada.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        valorClienteDepositarEntrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         valorClienteDepositarEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valorClienteDepositarEntradaActionPerformed(evt);
             }
         });
 
-        butClienteDepositar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteDepositar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         butClienteDepositar.setText("Depositar");
         butClienteDepositar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butClienteDepositarActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,20 +72,24 @@ public class DepositarClienteValor extends javax.swing.JFrame {
                     .addComponent(valorClienteDepositoTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(valorClienteDepositarEntrada)
                     .addComponent(butClienteDepositar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(23, 23, 23)
                 .addComponent(tituloDepositarCliente)
                 .addGap(18, 18, 18)
                 .addComponent(valorClienteDepositoTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(valorClienteDepositarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(29, 29, 29)
                 .addComponent(butClienteDepositar)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         pack();
@@ -196,6 +206,7 @@ public class DepositarClienteValor extends javax.swing.JFrame {
     private ControllerDepositarClienteValor controllerDepositarValor;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteDepositar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloDepositarCliente;
     private javax.swing.JTextField valorClienteDepositarEntrada;
     private javax.swing.JLabel valorClienteDepositoTXT;

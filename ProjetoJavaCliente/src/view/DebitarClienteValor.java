@@ -28,29 +28,35 @@ public class DebitarClienteValor extends javax.swing.JFrame {
         valorClienteDebitarTXT = new javax.swing.JLabel();
         valorCienteDebitarEntrada = new javax.swing.JTextField();
         butClienteDebitar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloDebiarCliente3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloDebiarCliente3.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloDebiarCliente3.setText("Debitar:");
 
-        valorClienteDebitarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        valorClienteDebitarTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         valorClienteDebitarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorClienteDebitarTXT.setText("Valor:");
 
+        valorCienteDebitarEntrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         valorCienteDebitarEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valorCienteDebitarEntradaActionPerformed(evt);
             }
         });
 
-        butClienteDebitar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteDebitar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         butClienteDebitar.setText("Debitar");
         butClienteDebitar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butClienteDebitarActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -59,28 +65,34 @@ public class DebitarClienteValor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(tituloDebiarCliente3))
+                        .addGap(146, 287, Short.MAX_VALUE)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(138, 138, 138)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(valorCienteDebitarEntrada)
-                            .addComponent(valorClienteDebitarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                            .addComponent(butClienteDebitar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(171, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tituloDebiarCliente3)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(valorCienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(valorClienteDebitarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                                    .addComponent(butClienteDebitar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(9, 9, 9)
                 .addComponent(tituloDebiarCliente3)
-                .addGap(41, 41, 41)
+                .addGap(18, 18, 18)
                 .addComponent(valorClienteDebitarTXT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(valorCienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(25, 25, 25)
                 .addComponent(butClienteDebitar)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         pack();
@@ -172,6 +184,7 @@ public class DebitarClienteValor extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteDebitar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloDebiarCliente3;
     private javax.swing.JTextField valorCienteDebitarEntrada;
     private javax.swing.JLabel valorClienteDebitarTXT;

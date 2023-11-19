@@ -8,8 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import model.Cliente;
-import model.DataHora;
-import model.Extrato;
 import view.DebitarCliente;
 import view.DebitarClienteValor;
 
@@ -23,34 +21,25 @@ public class ControllerDebitoClienteValor {
     }
     
     public void debitar(){
-        DataHora dataHora = new DataHora();
         Cliente cliente = new Cliente(cpf);
         double debito = Double.parseDouble(view.getValorCienteDebitarEntrada().getText());
-        double debitoExtrato = - debito;
         Conexao conexao = new Conexao();
         try{
-            Connection conn1 = conexao.getConnection();
-            Connection conn2 = conexao.getConnection();
-            ClienteDAO dao1 = new ClienteDAO(conn1);
-            ClienteDAO dao2 = new ClienteDAO(conn2);
-            String conta = dao1.consultarContaCliente(cliente);
-            double saldo = dao1.consultarSaldoCliente(cliente);
+            Connection conn = conexao.getConnection();
+            ClienteDAO dao = new ClienteDAO(conn);
+            String conta = dao.consultarContaCliente(cliente);
+            double saldo = dao.consultarSaldoCliente(cliente);
             if (conta.equals("Poupança")){
                 if(saldo < debito){
                     JOptionPane.showMessageDialog(view,"Operação Inválida",
                     "Aviso", JOptionPane.INFORMATION_MESSAGE);
-                    view.setVisible(false);
                 }
                 else{
                     double novoDebito = saldo - debito;
                     cliente.setSaldo(novoDebito);
-                    dao1.escolherSaldo(cliente);
-                    Extrato extrato = new Extrato(cpf, dataHora.dateNow(),
-                dataHora.timeNow(), debitoExtrato, 0.0, novoDebito);
-                    dao2.inserirExtrato(extrato);
+                    dao.escolherSaldo(cliente);
                     JOptionPane.showMessageDialog(view,"Debito Realizado",
                     "Aviso", JOptionPane.INFORMATION_MESSAGE);
-                    view.setVisible(false);
                 }
             }
             else if (conta.equals("Corrente")){
@@ -62,17 +51,12 @@ public class ControllerDebitoClienteValor {
                 if(novoDebito < limite){
                     JOptionPane.showMessageDialog(view,"Operação Inválida",
                     "Aviso", JOptionPane.INFORMATION_MESSAGE);
-                    view.setVisible(false);
                 }
                 else{
                     cliente.setSaldo(novoDebito);
-                    dao1.escolherSaldo(cliente);
-                    Extrato extrato = new Extrato(cpf, dataHora.dateNow(),
-                dataHora.timeNow(), debitoExtrato, taxa, novoDebito);
-                    dao2.inserirExtrato(extrato);
+                    dao.escolherSaldo(cliente);
                     JOptionPane.showMessageDialog(view,"Debito Realizado",
                     "Aviso", JOptionPane.INFORMATION_MESSAGE);
-                    view.setVisible(false);
                 }
             }
             else{
@@ -83,23 +67,17 @@ public class ControllerDebitoClienteValor {
                 if(saldo < novoDebito){
                     JOptionPane.showMessageDialog(view,"Operação Inválida",
                     "Aviso", JOptionPane.INFORMATION_MESSAGE);
-                    view.setVisible(false);
                 }
                 else{
                     cliente.setSaldo(novoDebito);
-                    dao1.escolherSaldo(cliente);
-                    Extrato extrato = new Extrato(cpf, dataHora.dateNow(),
-                dataHora.timeNow(), debitoExtrato, taxa, novoDebito);
-                    dao2.inserirExtrato(extrato);
+                    dao.escolherSaldo(cliente);
                     JOptionPane.showMessageDialog(view,"Debito Realizado",
                     "Aviso", JOptionPane.INFORMATION_MESSAGE);
-                    view.setVisible(false);
                 }
             }
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(view,"Falha de conexão",
                     "Erro", JOptionPane.ERROR_MESSAGE);
-            view.setVisible(false);
         }
     }
 }

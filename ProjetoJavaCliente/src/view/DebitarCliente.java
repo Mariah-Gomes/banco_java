@@ -24,27 +24,31 @@ public class DebitarCliente extends javax.swing.JFrame {
         cpfSenhaDebitarTXT = new javax.swing.JLabel();
         senhaClienteDebitarEntrada = new javax.swing.JTextField();
         butClienteDebitarEntrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloDebitarCliente1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloDebitarCliente1.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloDebitarCliente1.setText("Debitar:");
 
+        cpfClienteDebitarEntrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cpfClienteDebitarEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfClienteDebitarEntradaActionPerformed(evt);
             }
         });
 
-        cpfClienteDebitarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cpfClienteDebitarTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cpfClienteDebitarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cpfClienteDebitarTXT.setText("CPF:");
 
-        cpfSenhaDebitarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cpfSenhaDebitarTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cpfSenhaDebitarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cpfSenhaDebitarTXT.setText("Senha:");
 
-        butClienteDebitarEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        senhaClienteDebitarEntrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        butClienteDebitarEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         butClienteDebitarEntrar.setText("Entrar");
         butClienteDebitarEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,40 +56,57 @@ public class DebitarCliente extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(175, 175, 175)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(158, 158, 158)
                 .addComponent(tituloDebitarCliente1)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(senhaClienteDebitarEntrada, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                    .addComponent(cpfClienteDebitarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                    .addComponent(cpfClienteDebitarEntrada, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                    .addComponent(cpfSenhaDebitarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                    .addComponent(butClienteDebitarEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(130, 130, 130))
+                .addContainerGap(136, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(butClienteDebitarEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(130, 130, 130))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cpfClienteDebitarTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cpfClienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cpfSenhaDebitarTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(senhaClienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(95, 95, 95))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloDebitarCliente1)
+                .addComponent(jLabel1)
                 .addGap(29, 29, 29)
-                .addComponent(cpfClienteDebitarTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cpfClienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(cpfSenhaDebitarTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senhaClienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloDebitarCliente1)
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cpfClienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfClienteDebitarTXT))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(senhaClienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfSenhaDebitarTXT))
                 .addGap(27, 27, 27)
                 .addComponent(butClienteDebitarEntrar)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         pack();
@@ -224,6 +245,7 @@ public class DebitarCliente extends javax.swing.JFrame {
     private javax.swing.JTextField cpfClienteDebitarEntrada;
     private javax.swing.JLabel cpfClienteDebitarTXT;
     private javax.swing.JLabel cpfSenhaDebitarTXT;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField senhaClienteDebitarEntrada;
     private javax.swing.JLabel tituloDebitarCliente1;
     // End of variables declaration//GEN-END:variables

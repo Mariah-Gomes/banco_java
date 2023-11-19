@@ -41,11 +41,9 @@ public class ControllerExibirSaldoCliente {
                 view.setVisible(false);
             }else{
                 JOptionPane.showMessageDialog(view,"Login não efetuado", "Erro", JOptionPane.ERROR_MESSAGE);
-                view.setVisible(false);
             }
         }catch(SQLException e){
             JOptionPane.showMessageDialog(view,"Erro de conexão", "Erro", JOptionPane.ERROR_MESSAGE);
-            view.setVisible(false);
         }
     }
 }

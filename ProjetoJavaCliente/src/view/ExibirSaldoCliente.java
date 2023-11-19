@@ -41,17 +41,18 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
         senhaClienteExibirSaldoEntrada = new javax.swing.JTextField();
         cpfClienteExibirSaldoTXT = new javax.swing.JLabel();
         butClienteExibirSaldo = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         cpfClienteDebitarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cpfClienteDebitarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cpfClienteDebitarTXT.setText("CPF:");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloExibirSaldoCliente1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloExibirSaldoCliente1.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloExibirSaldoCliente1.setText("Exibir Saldo:");
 
-        senhaClienteExibirSaldoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        senhaClienteExibirSaldoTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         senhaClienteExibirSaldoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         senhaClienteExibirSaldoTXT.setText("Senha:");
 
@@ -67,11 +68,11 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
             }
         });
 
-        cpfClienteExibirSaldoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cpfClienteExibirSaldoTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cpfClienteExibirSaldoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cpfClienteExibirSaldoTXT.setText("CPF:");
 
-        butClienteExibirSaldo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteExibirSaldo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         butClienteExibirSaldo.setText("Exibir Saldo");
         butClienteExibirSaldo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,42 +80,51 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel4.setText("Banco Mariago");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(117, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cpfClienteExibirSaldoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(senhaClienteExibirSaldoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(cpfClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(139, 139, 139)
-                            .addComponent(tituloExibirSaldoCliente1)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(butClienteExibirSaldo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(senhaClienteExibirSaldoEntrada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)))
-                .addContainerGap(134, Short.MAX_VALUE))
+                    .addComponent(tituloExibirSaldoCliente1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cpfClienteExibirSaldoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cpfClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(senhaClienteExibirSaldoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(senhaClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(butClienteExibirSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel4)
+                .addGap(28, 28, 28)
                 .addComponent(tituloExibirSaldoCliente1)
-                .addGap(50, 50, 50)
-                .addComponent(cpfClienteExibirSaldoTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cpfClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(senhaClienteExibirSaldoTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senhaClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cpfClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfClienteExibirSaldoTXT))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(senhaClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(senhaClienteExibirSaldoTXT))
+                .addGap(18, 18, 18)
                 .addComponent(butClienteExibirSaldo)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         pack();
@@ -270,6 +280,7 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
     private javax.swing.JLabel cpfClienteDebitarTXT;
     private javax.swing.JTextField cpfClienteExibirSaldoEntrada;
     private javax.swing.JLabel cpfClienteExibirSaldoTXT;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField senhaClienteExibirSaldoEntrada;
     private javax.swing.JLabel senhaClienteExibirSaldoTXT;

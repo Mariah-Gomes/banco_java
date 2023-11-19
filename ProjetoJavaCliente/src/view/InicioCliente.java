@@ -33,13 +33,14 @@ public class InicioCliente extends javax.swing.JFrame {
         debitarCliente1 = new javax.swing.JButton();
         exiberSaldoCliente = new javax.swing.JButton();
         debitarCliente3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloMenuCliente.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloMenuCliente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloMenuCliente.setText("Menu Principal:");
 
-        depositarCliente.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        depositarCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         depositarCliente.setText("Depositar");
         depositarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,7 +48,7 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
-        debitarCliente1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        debitarCliente1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         debitarCliente1.setText("Debitar");
         debitarCliente1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,7 +56,7 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
-        exiberSaldoCliente.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        exiberSaldoCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         exiberSaldoCliente.setText("Exibir Saldo");
         exiberSaldoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +64,7 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
-        debitarCliente3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        debitarCliente3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         debitarCliente3.setText("Exibir Extrato");
         debitarCliente3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,33 +72,45 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(tituloMenuCliente))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(debitarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(depositarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(116, Short.MAX_VALUE))
+                        .addGap(245, 245, 245)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(exiberSaldoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(debitarCliente3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(debitarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(depositarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(56, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(exiberSaldoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(debitarCliente3))
-                .addGap(55, 55, 55))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(tituloMenuCliente)
+                        .addGap(110, 110, 110))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(31, 31, 31)
                 .addComponent(tituloMenuCliente)
-                .addGap(21, 21, 21)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(debitarCliente1)
                     .addComponent(exiberSaldoCliente))
@@ -105,7 +118,7 @@ public class InicioCliente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(depositarCliente)
                     .addComponent(debitarCliente3))
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         pack();
@@ -239,6 +252,7 @@ public class InicioCliente extends javax.swing.JFrame {
     private javax.swing.JButton debitarCliente3;
     private javax.swing.JButton depositarCliente;
     private javax.swing.JButton exiberSaldoCliente;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloMenuCliente;
     // End of variables declaration//GEN-END:variables
 }
