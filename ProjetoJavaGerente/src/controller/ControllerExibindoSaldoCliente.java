@@ -30,7 +30,7 @@ public class ControllerExibindoSaldoCliente {
             double saldoCliente = dao.consultarSaldoCliente(cliente);
             // Exibindo o saldo no GUI.
             view.getTxtSaidaExibirSaldo().setText(
-                    String.valueOf(saldoCliente));
+                    "R$ " + String.valueOf(saldoCliente));
         }catch(SQLException ex){
             // Erro de conexão.
             JOptionPane.showMessageDialog(view,

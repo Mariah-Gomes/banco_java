@@ -40,7 +40,7 @@ public class ControllerExibirContasCliente {
                             cliente.getCpf()).append("\n");
                     textoClientes.append("Tipo de Conta: ").append(
                             cliente.getTipoConta()).append("\n");
-                    textoClientes.append("Saldo: ").append(
+                    textoClientes.append("Saldo: ").append("R$ ").append(
                             cliente.getSaldo()).append("\n");
                     textoClientes.append("Senha: ").append(
                             cliente.getSenha()).append("\n\n");
