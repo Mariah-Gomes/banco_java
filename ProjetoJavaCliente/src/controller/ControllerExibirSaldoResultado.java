@@ -26,7 +26,7 @@ public class ControllerExibirSaldoResultado {
             Connection conn = conexao.getConnection();
             ClienteDAO dao = new ClienteDAO(conn);
             double saldoCliente = dao.consultarSaldoCliente(cliente);
-            view.getTxtSaidaExibirContas().setText(String.valueOf(saldoCliente));
+            view.getTxtSaidaExibirContas().setText("R$ " + String.valueOf(saldoCliente));
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(view,
                     "Falha na conexão",
