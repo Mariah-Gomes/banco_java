@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 package view;
 
@@ -13,6 +14,25 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
     public ExibirExtratoCliente() {
         initComponents();
         controlExtrato = new ControllerExibirExtratoCliente(this);
+=======
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package view;
+
+/**
+ *
+ * @author unifmgomes
+ */
+public class ExibirExtratoCliente extends javax.swing.JFrame {
+
+    /**
+     * Creates new form ExibirExtratoCliente
+     */
+    public ExibirExtratoCliente() {
+        initComponents();
+>>>>>>> main
     }
 
     /**
@@ -27,14 +47,20 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
         cpfClienteExibirSaldoTXT = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+<<<<<<< HEAD
         jLabel4 = new javax.swing.JLabel();
+=======
+>>>>>>> main
         tituloExibirExtratoCliente1 = new javax.swing.JLabel();
         cpfClienteExibirExtrato = new javax.swing.JTextField();
         senhaClienteExibirExtrato = new javax.swing.JTextField();
         cpfClienteExibirExtratoTXT = new javax.swing.JLabel();
         senhaClienteExibirExtratoTXT = new javax.swing.JLabel();
         butClienteExibirExtrato = new javax.swing.JButton();
+<<<<<<< HEAD
         jLabel3 = new javax.swing.JLabel();
+=======
+>>>>>>> main
 
         cpfClienteExibirSaldoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cpfClienteExibirSaldoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -44,6 +70,7 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
+<<<<<<< HEAD
         jLabel4.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 153));
         jLabel4.setText("Banco Mariago");
@@ -51,6 +78,11 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         tituloExibirExtratoCliente1.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
+=======
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        tituloExibirExtratoCliente1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+>>>>>>> main
         tituloExibirExtratoCliente1.setText("Exibir Extrato:");
 
         cpfClienteExibirExtrato.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +97,7 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         cpfClienteExibirExtratoTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cpfClienteExibirExtratoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cpfClienteExibirExtratoTXT.setText("CPF:");
@@ -84,12 +117,25 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 153));
         jLabel3.setText("Banco Mariago");
+=======
+        cpfClienteExibirExtratoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cpfClienteExibirExtratoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cpfClienteExibirExtratoTXT.setText("CPF:");
+
+        senhaClienteExibirExtratoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        senhaClienteExibirExtratoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        senhaClienteExibirExtratoTXT.setText("Senha:");
+
+        butClienteExibirExtrato.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteExibirExtrato.setText("Exibir Extrato");
+>>>>>>> main
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap(287, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addContainerGap())
@@ -110,11 +156,23 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
                             .addComponent(senhaClienteExibirExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+                .addGap(144, 144, 144)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tituloExibirExtratoCliente1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cpfClienteExibirExtrato)
+                    .addComponent(cpfClienteExibirExtratoTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(senhaClienteExibirExtratoTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(senhaClienteExibirExtrato)
+                    .addComponent(butClienteExibirExtrato, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
+>>>>>>> main
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(jLabel3)
                 .addGap(49, 49, 49)
                 .addComponent(tituloExibirExtratoCliente1)
@@ -129,6 +187,20 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(butClienteExibirExtrato)
                 .addContainerGap(79, Short.MAX_VALUE))
+=======
+                .addComponent(tituloExibirExtratoCliente1)
+                .addGap(18, 18, 18)
+                .addComponent(cpfClienteExibirExtratoTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cpfClienteExibirExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(senhaClienteExibirExtratoTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(senhaClienteExibirExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(butClienteExibirExtrato)
+                .addContainerGap(91, Short.MAX_VALUE))
+>>>>>>> main
         );
 
         pack();
@@ -142,6 +214,7 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaClienteExibirExtratoActionPerformed
 
+<<<<<<< HEAD
     private void butClienteExibirExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteExibirExtratoActionPerformed
         controlExtrato.entrarExibirExtrato();
     }//GEN-LAST:event_butClienteExibirExtratoActionPerformed
@@ -222,6 +295,8 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
         return tituloExibirExtratoCliente1;
     }
 
+=======
+>>>>>>> main
     /**
      * @param args the command line arguments
      */
@@ -256,11 +331,15 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
 //            }
 //        });
 //    }
+<<<<<<< HEAD
     public void setTituloExibirExtratoCliente1(JLabel tituloExibirExtratoCliente1) {
         this.tituloExibirExtratoCliente1 = tituloExibirExtratoCliente1;
     }
     private ControllerExibirExtratoCliente controlExtrato;
     
+=======
+
+>>>>>>> main
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteExibirExtrato;
     private javax.swing.JTextField cpfClienteExibirExtrato;
@@ -268,8 +347,11 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
     private javax.swing.JLabel cpfClienteExibirSaldoTXT;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+=======
+>>>>>>> main
     private javax.swing.JTextField senhaClienteExibirExtrato;
     private javax.swing.JLabel senhaClienteExibirExtratoTXT;
     private javax.swing.JLabel tituloExibirExtratoCliente1;

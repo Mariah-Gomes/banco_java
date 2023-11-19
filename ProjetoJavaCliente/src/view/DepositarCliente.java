@@ -4,12 +4,15 @@
  */
 package view;
 
+<<<<<<< HEAD
 import controller.ControllerDebitoCliente;
 import controller.ControllerDepositarCliente;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+=======
+>>>>>>> main
 /**
  *
  * @author unifmgomes
@@ -21,7 +24,10 @@ public class DepositarCliente extends javax.swing.JFrame {
      */
     public DepositarCliente() {
         initComponents();
+<<<<<<< HEAD
         controllerDeposito = new ControllerDepositarCliente(this);
+=======
+>>>>>>> main
     }
 
     /**
@@ -39,6 +45,7 @@ public class DepositarCliente extends javax.swing.JFrame {
         cpfClienteDepositarEntrada = new javax.swing.JTextField();
         senhaClienteDepositarEntrada1 = new javax.swing.JTextField();
         butClienteDepositarEntrar = new javax.swing.JButton();
+<<<<<<< HEAD
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,19 +62,39 @@ public class DepositarCliente extends javax.swing.JFrame {
         senhaClienteDepositarTXT.setText("Senha:");
 
         cpfClienteDepositarEntrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+=======
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        tituloDepositarCliente.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloDepositarCliente.setText("Depositar:");
+
+        cpfClienteDepositarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cpfClienteDepositarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cpfClienteDepositarTXT.setText("CPF:");
+
+        senhaClienteDepositarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        senhaClienteDepositarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        senhaClienteDepositarTXT.setText("Senha:");
+
+>>>>>>> main
         cpfClienteDepositarEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfClienteDepositarEntradaActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
         senhaClienteDepositarEntrada1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+=======
+>>>>>>> main
         senhaClienteDepositarEntrada1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaClienteDepositarEntrada1ActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
         butClienteDepositarEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         butClienteDepositarEntrar.setText("Entrar");
         butClienteDepositarEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -79,11 +106,16 @@ public class DepositarCliente extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("Banco Mariago");
+=======
+        butClienteDepositarEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteDepositarEntrar.setText("Entrar");
+>>>>>>> main
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(287, Short.MAX_VALUE)
                 .addComponent(jLabel1)
@@ -102,11 +134,24 @@ public class DepositarCliente extends javax.swing.JFrame {
                             .addComponent(cpfClienteDepositarEntrada, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(tituloDepositarCliente))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(144, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(cpfClienteDepositarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tituloDepositarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cpfClienteDepositarEntrada)
+                    .addComponent(senhaClienteDepositarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(senhaClienteDepositarEntrada1)
+                    .addComponent(butClienteDepositarEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(152, 152, 152))
+>>>>>>> main
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(jLabel1)
                 .addGap(51, 51, 51)
                 .addComponent(tituloDepositarCliente)
@@ -121,6 +166,20 @@ public class DepositarCliente extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(butClienteDepositarEntrar)
                 .addContainerGap(86, Short.MAX_VALUE))
+=======
+                .addComponent(tituloDepositarCliente)
+                .addGap(43, 43, 43)
+                .addComponent(cpfClienteDepositarTXT)
+                .addGap(4, 4, 4)
+                .addComponent(cpfClienteDepositarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(senhaClienteDepositarTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(senhaClienteDepositarEntrada1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(butClienteDepositarEntrar)
+                .addContainerGap(73, Short.MAX_VALUE))
+>>>>>>> main
         );
 
         pack();
@@ -134,10 +193,13 @@ public class DepositarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaClienteDepositarEntrada1ActionPerformed
 
+<<<<<<< HEAD
     private void butClienteDepositarEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteDepositarEntrarActionPerformed
         controllerDeposito.entrarClienteDeposito();
     }//GEN-LAST:event_butClienteDepositarEntrarActionPerformed
 
+=======
+>>>>>>> main
     /**
      * @param args the command line arguments
      */
@@ -172,6 +234,7 @@ public class DepositarCliente extends javax.swing.JFrame {
 //            }
 //        });
 //    }
+<<<<<<< HEAD
     private ControllerDepositarCliente controllerDeposito;
 
     public ControllerDepositarCliente getControllerDeposito() {
@@ -229,11 +292,17 @@ public class DepositarCliente extends javax.swing.JFrame {
     public void setTituloDepositarCliente(JLabel tituloDepositarCliente) {
         this.tituloDepositarCliente = tituloDepositarCliente;
     }
+=======
+
+>>>>>>> main
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteDepositarEntrar;
     private javax.swing.JTextField cpfClienteDepositarEntrada;
     private javax.swing.JLabel cpfClienteDepositarTXT;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel1;
+=======
+>>>>>>> main
     private javax.swing.JTextField senhaClienteDepositarEntrada1;
     private javax.swing.JLabel senhaClienteDepositarTXT;
     private javax.swing.JLabel tituloDepositarCliente;

@@ -4,12 +4,15 @@
  */
 package view;
 
+<<<<<<< HEAD
 import controller.ControllerExibirSaldoCliente;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 
+=======
+>>>>>>> main
 /**
  *
  * @author unifmgomes
@@ -21,7 +24,10 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
      */
     public ExibirSaldoCliente() {
         initComponents();
+<<<<<<< HEAD
         control = new ControllerExibirSaldoCliente(this);
+=======
+>>>>>>> main
     }
 
     /**
@@ -41,7 +47,10 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
         senhaClienteExibirSaldoEntrada = new javax.swing.JTextField();
         cpfClienteExibirSaldoTXT = new javax.swing.JLabel();
         butClienteExibirSaldo = new javax.swing.JButton();
+<<<<<<< HEAD
         jLabel4 = new javax.swing.JLabel();
+=======
+>>>>>>> main
 
         cpfClienteDebitarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cpfClienteDebitarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -49,10 +58,17 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+<<<<<<< HEAD
         tituloExibirSaldoCliente1.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloExibirSaldoCliente1.setText("Exibir Saldo:");
 
         senhaClienteExibirSaldoTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+=======
+        tituloExibirSaldoCliente1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloExibirSaldoCliente1.setText("Exibir Saldo:");
+
+        senhaClienteExibirSaldoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+>>>>>>> main
         senhaClienteExibirSaldoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         senhaClienteExibirSaldoTXT.setText("Senha:");
 
@@ -68,6 +84,7 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         cpfClienteExibirSaldoTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cpfClienteExibirSaldoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cpfClienteExibirSaldoTXT.setText("CPF:");
@@ -83,12 +100,21 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 153));
         jLabel4.setText("Banco Mariago");
+=======
+        cpfClienteExibirSaldoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cpfClienteExibirSaldoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cpfClienteExibirSaldoTXT.setText("CPF:");
+
+        butClienteExibirSaldo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteExibirSaldo.setText("Exibir Saldo");
+>>>>>>> main
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addContainerGap())
@@ -107,11 +133,28 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
                             .addComponent(butClienteExibirSaldo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(senhaClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(139, Short.MAX_VALUE))
+=======
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cpfClienteExibirSaldoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(senhaClienteExibirSaldoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(cpfClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(139, 139, 139)
+                            .addComponent(tituloExibirSaldoCliente1)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(butClienteExibirSaldo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(senhaClienteExibirSaldoEntrada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)))
+                .addContainerGap(134, Short.MAX_VALUE))
+>>>>>>> main
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(jLabel4)
                 .addGap(47, 47, 47)
                 .addComponent(tituloExibirSaldoCliente1)
@@ -126,6 +169,20 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(butClienteExibirSaldo)
                 .addContainerGap(75, Short.MAX_VALUE))
+=======
+                .addComponent(tituloExibirSaldoCliente1)
+                .addGap(50, 50, 50)
+                .addComponent(cpfClienteExibirSaldoTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cpfClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(senhaClienteExibirSaldoTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(senhaClienteExibirSaldoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(butClienteExibirSaldo)
+                .addContainerGap(33, Short.MAX_VALUE))
+>>>>>>> main
         );
 
         pack();
@@ -139,10 +196,13 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaClienteExibirSaldoEntradaActionPerformed
 
+<<<<<<< HEAD
     private void butClienteExibirSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteExibirSaldoActionPerformed
         control.entrarExibirSaldo();
     }//GEN-LAST:event_butClienteExibirSaldoActionPerformed
 
+=======
+>>>>>>> main
     /**
      * @param args the command line arguments
      */
@@ -178,6 +238,7 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
 //        });
 //    }
 
+<<<<<<< HEAD
     public JButton getButClienteExibirSaldo() {
         return butClienteExibirSaldo;
     }
@@ -276,12 +337,17 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
         this.tituloExibirSaldoCliente1 = tituloExibirSaldoCliente1;
     }
     private ControllerExibirSaldoCliente control;
+=======
+>>>>>>> main
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteExibirSaldo;
     private javax.swing.JLabel cpfClienteDebitarTXT;
     private javax.swing.JTextField cpfClienteExibirSaldoEntrada;
     private javax.swing.JLabel cpfClienteExibirSaldoTXT;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel4;
+=======
+>>>>>>> main
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField senhaClienteExibirSaldoEntrada;
     private javax.swing.JLabel senhaClienteExibirSaldoTXT;

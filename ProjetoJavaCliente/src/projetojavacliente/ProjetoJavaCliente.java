@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package projetojavacliente;
 
 import view.InicioCliente;
@@ -7,4 +8,15 @@ public class ProjetoJavaCliente {
         InicioCliente ic = new InicioCliente(null);
         ic.setVisible(true);
     }
+=======
+
+package projetojavacliente;
+
+public class ProjetoJavaCliente {
+
+    public static void main(String[] args) {
+        
+    }
+    
+>>>>>>> main
 }

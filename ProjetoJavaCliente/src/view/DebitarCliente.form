@@ -23,6 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Group type="102" attributes="0">
               <EmptySpace pref="287" max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -53,6 +54,23 @@
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+=======
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
+              <Component id="tituloDebitarCliente1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="143" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="senhaClienteDebitarEntrada" pref="114" max="32767" attributes="0"/>
+                  <Component id="cpfClienteDebitarTXT" alignment="0" pref="114" max="32767" attributes="0"/>
+                  <Component id="cpfClienteDebitarEntrada" pref="114" max="32767" attributes="0"/>
+                  <Component id="cpfSenhaDebitarTXT" alignment="0" pref="114" max="32767" attributes="0"/>
+                  <Component id="butClienteDebitarEntrar" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+>>>>>>> main
           </Group>
       </Group>
     </DimensionLayout>
@@ -60,6 +78,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
+<<<<<<< HEAD
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               <Component id="tituloDebitarCliente1" min="-2" max="-2" attributes="0"/>
@@ -76,6 +95,20 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="butClienteDebitarEntrar" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="78" max="32767" attributes="0"/>
+=======
+              <Component id="tituloDebitarCliente1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="cpfClienteDebitarTXT" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="cpfClienteDebitarEntrada" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Component id="cpfSenhaDebitarTXT" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="senhaClienteDebitarEntrada" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Component id="butClienteDebitarEntrar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="68" max="32767" attributes="0"/>
+>>>>>>> main
           </Group>
       </Group>
     </DimensionLayout>
@@ -84,12 +117,17 @@
     <Component class="javax.swing.JLabel" name="tituloDebitarCliente1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+<<<<<<< HEAD
           <Font name="Segoe UI Black" size="20" style="1"/>
+=======
+          <Font name="Tahoma" size="20" style="1"/>
+>>>>>>> main
         </Property>
         <Property name="text" type="java.lang.String" value="Debitar:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="cpfClienteDebitarEntrada">
+<<<<<<< HEAD
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -97,6 +135,8 @@
           </Border>
         </Property>
       </Properties>
+=======
+>>>>>>> main
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cpfClienteDebitarEntradaActionPerformed"/>
       </Events>
@@ -104,7 +144,11 @@
     <Component class="javax.swing.JLabel" name="cpfClienteDebitarTXT">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+<<<<<<< HEAD
           <Font name="Segoe UI" size="12" style="1"/>
+=======
+          <Font name="Tahoma" size="12" style="0"/>
+>>>>>>> main
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="CPF:"/>
@@ -113,13 +157,18 @@
     <Component class="javax.swing.JLabel" name="cpfSenhaDebitarTXT">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+<<<<<<< HEAD
           <Font name="Segoe UI" size="12" style="1"/>
+=======
+          <Font name="Tahoma" size="12" style="0"/>
+>>>>>>> main
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Senha:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="senhaClienteDebitarEntrada">
+<<<<<<< HEAD
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -127,10 +176,13 @@
           </Border>
         </Property>
       </Properties>
+=======
+>>>>>>> main
     </Component>
     <Component class="javax.swing.JButton" name="butClienteDebitarEntrar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+<<<<<<< HEAD
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Entrar"/>
@@ -149,6 +201,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Banco Mariago"/>
       </Properties>
+=======
+          <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Entrar"/>
+      </Properties>
+>>>>>>> main
     </Component>
   </SubComponents>
 </Form>
