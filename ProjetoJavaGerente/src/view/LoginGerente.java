@@ -104,6 +104,7 @@ public class LoginGerente extends javax.swing.JFrame {
         txtEntradaLogin = new javax.swing.JTextField();
         txtEntradaSenha = new javax.swing.JTextField();
         btEntrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         Opcoes = new javax.swing.JMenu();
         NovoGerente = new javax.swing.JMenuItem();
@@ -111,22 +112,27 @@ public class LoginGerente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lbLogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbLogin.setText("Login:");
 
+        lbSenhaLogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbSenhaLogin.setText("Senha:");
 
+        txtEntradaLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtEntradaLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEntradaLoginActionPerformed(evt);
             }
         });
 
+        txtEntradaSenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtEntradaSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEntradaSenhaActionPerformed(evt);
             }
         });
 
+        btEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btEntrar.setText("Entrar");
         btEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +140,12 @@ public class LoginGerente extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
+
         Opcoes.setText("Opções");
+        Opcoes.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         NovoGerente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         NovoGerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/newuser.png"))); // NOI18N
@@ -146,6 +157,7 @@ public class LoginGerente extends javax.swing.JFrame {
         });
         Opcoes.add(NovoGerente);
 
+        ExcluirGerente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         ExcluirGerente.setText("Excluir gerente");
         ExcluirGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,16 +180,22 @@ public class LoginGerente extends javax.swing.JFrame {
                     .addComponent(lbLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbSenhaLogin))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btEntrar)
-                    .addComponent(txtEntradaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntradaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtEntradaLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(txtEntradaSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(btEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(134, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(74, 74, 74)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbLogin)
                     .addComponent(txtEntradaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -187,7 +205,7 @@ public class LoginGerente extends javax.swing.JFrame {
                     .addComponent(txtEntradaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btEntrar)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         pack();
@@ -261,6 +279,7 @@ public class LoginGerente extends javax.swing.JFrame {
     private javax.swing.JMenuItem NovoGerente;
     private javax.swing.JMenu Opcoes;
     private javax.swing.JButton btEntrar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel lbLogin;
     private javax.swing.JLabel lbSenhaLogin;

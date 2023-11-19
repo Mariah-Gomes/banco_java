@@ -88,9 +88,11 @@ public class MenuGerente extends javax.swing.JFrame {
         btExibirContas = new javax.swing.JButton();
         btExibirSaldo = new javax.swing.JButton();
         lbMenuGerente = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btCadastrarCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btCadastrarCliente.setText("Cadastrar Cliente");
         btCadastrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +100,7 @@ public class MenuGerente extends javax.swing.JFrame {
             }
         });
 
+        btExcluirCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btExcluirCliente.setText("Excluir Cliente");
         btExcluirCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +108,7 @@ public class MenuGerente extends javax.swing.JFrame {
             }
         });
 
+        btCriarConta.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btCriarConta.setText("Criar Conta");
         btCriarConta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +116,7 @@ public class MenuGerente extends javax.swing.JFrame {
             }
         });
 
+        btExibirContas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btExibirContas.setText("Exibir Contas");
         btExibirContas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +124,7 @@ public class MenuGerente extends javax.swing.JFrame {
             }
         });
 
+        btExibirSaldo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btExibirSaldo.setText("Exibir Saldo");
         btExibirSaldo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,9 +132,13 @@ public class MenuGerente extends javax.swing.JFrame {
             }
         });
 
-        lbMenuGerente.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbMenuGerente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         lbMenuGerente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbMenuGerente.setText("Menu");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,19 +146,26 @@ public class MenuGerente extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbMenuGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(141, Short.MAX_VALUE)
+                .addContainerGap(137, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btExibirSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btExibirContas, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btCriarConta, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btExcluirCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btCadastrarCliente))
-                .addGap(139, 139, 139))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btExibirSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btExibirContas, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btCriarConta, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btExcluirCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btCadastrarCliente))
+                        .addGap(139, 139, 139))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addComponent(lbMenuGerente)
                 .addGap(18, 18, 18)
                 .addComponent(btCadastrarCliente)
@@ -160,7 +177,7 @@ public class MenuGerente extends javax.swing.JFrame {
                 .addComponent(btExibirContas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btExibirSaldo)
-                .addGap(49, 49, 49))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
@@ -235,6 +252,7 @@ public class MenuGerente extends javax.swing.JFrame {
     private javax.swing.JButton btExcluirCliente;
     private javax.swing.JButton btExibirContas;
     private javax.swing.JButton btExibirSaldo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbMenuGerente;
     // End of variables declaration//GEN-END:variables
 }

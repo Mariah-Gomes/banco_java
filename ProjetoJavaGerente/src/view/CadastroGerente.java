@@ -104,27 +104,34 @@ public class CadastroGerente extends javax.swing.JFrame {
         lbSenhaCadastroGerente = new javax.swing.JLabel();
         btCadastrarGerente = new javax.swing.JButton();
         txtEntradaNomeCadastroGerente = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        lbCadastrarGerente.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbCadastrarGerente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         lbCadastrarGerente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbCadastrarGerente.setText("Cadastrar Gerente");
 
         txtEntradaSenhaCadastroGerente.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaSenhaCadastroGerente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtEntradaLoginCadastroGerente.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaLoginCadastroGerente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        lbNomeCadastroGerente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbNomeCadastroGerente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbNomeCadastroGerente.setText("Nome:");
 
+        lbLoginCadastroGerente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbLoginCadastroGerente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbLoginCadastroGerente.setText("Login:");
         lbLoginCadastroGerente.setToolTipText("");
 
+        lbSenhaCadastroGerente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbSenhaCadastroGerente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbSenhaCadastroGerente.setText("Senha:");
 
+        btCadastrarGerente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btCadastrarGerente.setText("Cadastrar");
         btCadastrarGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,11 +140,16 @@ public class CadastroGerente extends javax.swing.JFrame {
         });
 
         txtEntradaNomeCadastroGerente.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaNomeCadastroGerente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtEntradaNomeCadastroGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEntradaNomeCadastroGerenteActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,30 +157,35 @@ public class CadastroGerente extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbCadastrarGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(287, Short.MAX_VALUE)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbLoginCadastroGerente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEntradaLoginCadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbSenhaCadastroGerente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEntradaSenhaCadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbNomeCadastroGerente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEntradaNomeCadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(146, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btCadastrarGerente)
-                .addGap(156, 156, 156))
+                        .addGap(112, 112, 112)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btCadastrarGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbLoginCadastroGerente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtEntradaLoginCadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbSenhaCadastroGerente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtEntradaSenhaCadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbNomeCadastroGerente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtEntradaNomeCadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 139, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(31, 31, 31)
                 .addComponent(lbCadastrarGerente)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,7 +201,7 @@ public class CadastroGerente extends javax.swing.JFrame {
                     .addComponent(lbSenhaCadastroGerente))
                 .addGap(18, 18, 18)
                 .addComponent(btCadastrarGerente)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pack();
@@ -239,6 +256,7 @@ public class CadastroGerente extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrarGerente;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbCadastrarGerente;
     private javax.swing.JLabel lbLoginCadastroGerente;
     private javax.swing.JLabel lbNomeCadastroGerente;

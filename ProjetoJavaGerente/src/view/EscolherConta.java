@@ -69,15 +69,17 @@ public class EscolherConta extends javax.swing.JFrame {
         btContaPoupancaCriar = new javax.swing.JButton();
         btContaCorrenteCriar = new javax.swing.JButton();
         btContaSalarioCriar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         btContaCorrenteCriar1.setText("Conta Corrente");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        lbCriarConta.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbCriarConta.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         lbCriarConta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbCriarConta.setText("Criar Conta");
 
+        btContaPoupancaCriar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btContaPoupancaCriar.setText("Conta Poupança");
         btContaPoupancaCriar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +87,7 @@ public class EscolherConta extends javax.swing.JFrame {
             }
         });
 
+        btContaCorrenteCriar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btContaCorrenteCriar.setText("Conta Corrente");
         btContaCorrenteCriar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,12 +95,17 @@ public class EscolherConta extends javax.swing.JFrame {
             }
         });
 
+        btContaSalarioCriar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btContaSalarioCriar.setText("Conta Salário");
         btContaSalarioCriar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btContaSalarioCriarActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,24 +114,31 @@ public class EscolherConta extends javax.swing.JFrame {
             .addComponent(lbCriarConta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(142, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btContaPoupancaCriar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btContaCorrenteCriar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btContaSalarioCriar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(140, 140, 140))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btContaPoupancaCriar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btContaCorrenteCriar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btContaSalarioCriar, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(140, 140, 140))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(50, 50, 50)
                 .addComponent(lbCriarConta)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
                 .addComponent(btContaPoupancaCriar)
                 .addGap(18, 18, 18)
                 .addComponent(btContaCorrenteCriar)
                 .addGap(18, 18, 18)
                 .addComponent(btContaSalarioCriar)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         pack();
@@ -187,6 +202,7 @@ public class EscolherConta extends javax.swing.JFrame {
     private javax.swing.JButton btContaCorrenteCriar1;
     private javax.swing.JButton btContaPoupancaCriar;
     private javax.swing.JButton btContaSalarioCriar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbCriarConta;
     // End of variables declaration//GEN-END:variables
 }

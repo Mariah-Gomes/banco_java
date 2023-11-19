@@ -1,5 +1,7 @@
-
+// Pacote
 package DAO;
+
+// Importações
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -8,13 +10,18 @@ import java.util.ArrayList;
 import model.Cliente;
 import model.Extrato;
 
+// Classe
 public class ClienteDAO {
     
+    // Atributos
     private Connection conn;
 
+    // Construtor
     public ClienteDAO(Connection conn) {
         this.conn = conn;
     }
+    
+    // Metodos
     
     // Função para consular os dados de um cliente no banco de dados (utilizando o CPF).
     public ResultSet consultarCliente(Cliente cliente) throws SQLException{
@@ -82,7 +89,8 @@ public class ClienteDAO {
     
     // Função para inserir um extrato de um cliente no banco de dados.
     public void inserirExtrato(Extrato extrato) throws SQLException{
-        String sql = "insert into extratos (cpf, data, hora, valor, tarifa, saldo) values (?, ?, ?, ?, ?, ?)";
+        String sql = "insert into extratos (cpf, data, hora, valor, tarifa, saldo)"
+                + " values (?, ?, ?, ?, ?, ?)";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, extrato.getCpf());
         statement.setString(2, extrato.getData());

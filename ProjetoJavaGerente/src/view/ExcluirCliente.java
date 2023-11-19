@@ -69,24 +69,32 @@ public class ExcluirCliente extends javax.swing.JFrame {
         lbCPF = new javax.swing.JLabel();
         txtEntradaCPFExcluir = new javax.swing.JTextField();
         btExcluir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        lbExcluirCliente.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbExcluirCliente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         lbExcluirCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbExcluirCliente.setText("Excluir Cliente");
 
+        lbCPF.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbCPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbCPF.setText("CPF:");
 
         txtEntradaCPFExcluir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaCPFExcluir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btExcluirActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,30 +103,36 @@ public class ExcluirCliente extends javax.swing.JFrame {
             .addComponent(lbExcluirCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 287, Short.MAX_VALUE)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(187, 187, 187)
-                        .addComponent(lbCPF))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(txtEntradaCPFExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(150, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btExcluir)
-                .addGap(163, 163, 163))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(187, 187, 187)
+                                .addComponent(lbCPF))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(150, 150, 150)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtEntradaCPFExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 144, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(56, 56, 56)
                 .addComponent(lbExcluirCliente)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
                 .addComponent(lbCPF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtEntradaCPFExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btExcluir)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         pack();
@@ -169,6 +183,7 @@ public class ExcluirCliente extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btExcluir;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbCPF;
     private javax.swing.JLabel lbExcluirCliente;
     private javax.swing.JTextField txtEntradaCPFExcluir;

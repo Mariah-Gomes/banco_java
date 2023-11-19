@@ -40,8 +40,7 @@ public class ControllerEscolherContaCliente {
                     "Conta Poupança Selecionada","Aviso",
                     JOptionPane.INFORMATION_MESSAGE);
             // Passando para próxima página passando o CPF do cliente para reutilizar.
-            ValorInicial viewValorInicial = new ValorInicial(
-                    new Cliente(cpf));
+            ValorInicial viewValorInicial = new ValorInicial(new Cliente(cpf));
                 ControllerValorInicialCliente controllerValorInicial = 
                         new ControllerValorInicialCliente(
                                 viewValorInicial, cpf);
@@ -69,8 +68,7 @@ public class ControllerEscolherContaCliente {
             JOptionPane.showMessageDialog(view,
                     "Conta Corrente Selecionada","Aviso",
                     JOptionPane.INFORMATION_MESSAGE);
-            ValorInicial viewValorInicial = new ValorInicial(
-                    new Cliente(cpf));
+            ValorInicial viewValorInicial = new ValorInicial(new Cliente(cpf));
                 ControllerValorInicialCliente controllerValorInicial = 
                         new ControllerValorInicialCliente(
                                 viewValorInicial, cpf);
@@ -97,8 +95,7 @@ public class ControllerEscolherContaCliente {
             JOptionPane.showMessageDialog(view,
                     "Conta Salário Selecionada","Aviso",
                     JOptionPane.INFORMATION_MESSAGE);
-            ValorInicial viewValorInicial = new ValorInicial(
-                    new Cliente(cpf));
+            ValorInicial viewValorInicial = new ValorInicial(new Cliente(cpf));
                 ControllerValorInicialCliente controllerValorInicial = 
                         new ControllerValorInicialCliente(
                                 viewValorInicial, cpf);

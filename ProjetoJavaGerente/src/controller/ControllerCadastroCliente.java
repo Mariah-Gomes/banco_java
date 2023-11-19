@@ -24,8 +24,7 @@ public class ControllerCadastroCliente {
         String cpf = view.getTxtEntradaCPFCadastrar().getText();
         String senha = view.getTxtEntradaSenhaCadastrar().getText();
         // Instânciando um novo objeto cliente com os dados recebidos.
-        Cliente cliente = new Cliente(cpf, null, 0.0,
-                nome, senha);
+        Cliente cliente = new Cliente(cpf, null, 0.0, nome, senha);
         Conexao conexao = new Conexao();
         try{
             // Utilizando as váriaveis de conexão.

@@ -1,11 +1,14 @@
-
+// Pacote
 package model;
 
+// Classe
 public class Cliente extends Pessoa{
     
+    // Atributos
     protected String cpf, tipoConta;
     protected double saldo;
 
+    // Construtores
     public Cliente() {
     }
 
@@ -26,6 +29,7 @@ public class Cliente extends Pessoa{
         this.saldo = saldo;
     }
 
+    // Getter and Setter
     public String getCpf() {
         return cpf;
     }
@@ -50,6 +54,7 @@ public class Cliente extends Pessoa{
         this.saldo = saldo;
     }
 
+    // toString
     @Override
     public String toString() {
         return "Cliente{" + "cpf=" + cpf + ", tipoConta=" + tipoConta +

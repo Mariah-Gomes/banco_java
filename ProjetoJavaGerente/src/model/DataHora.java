@@ -1,5 +1,6 @@
 
 package model;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -35,7 +36,8 @@ public class DataHora {
     // Função para retornar a data atual em formato String.
     public String dateNow(){
         LocalDate dataAtual = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
+                "dd/MM/yyyy");
         String dataFormatada = dataAtual.format(formatter);
         return dataFormatada;
     }
@@ -43,7 +45,8 @@ public class DataHora {
     // Função para retornar o horário atual em formato String.
     public String timeNow(){
         LocalTime horarioAtual = LocalTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
+                "HH:mm:ss");
         String horarioFormatado = horarioAtual.format(formatter);
         return horarioFormatado;
     }

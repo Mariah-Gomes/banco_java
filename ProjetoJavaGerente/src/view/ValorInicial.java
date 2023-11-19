@@ -69,23 +69,27 @@ public class ValorInicial extends javax.swing.JFrame {
         lbValorInicial = new javax.swing.JLabel();
         txtEntradaValorInicialCriar = new javax.swing.JTextField();
         btCriarConta = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        lbCriarConta.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbCriarConta.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         lbCriarConta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbCriarConta.setText("Criar Conta");
 
+        lbValorInicial.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbValorInicial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbValorInicial.setText("Valor inicial:");
 
         txtEntradaValorInicialCriar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtEntradaValorInicialCriar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtEntradaValorInicialCriar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEntradaValorInicialCriarActionPerformed(evt);
             }
         });
 
+        btCriarConta.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btCriarConta.setText("Criar");
         btCriarConta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,37 +97,47 @@ public class ValorInicial extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbCriarConta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btCriarConta)
-                .addGap(163, 163, 163))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 287, Short.MAX_VALUE)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(txtEntradaValorInicialCriar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(lbValorInicial)))
-                .addContainerGap(150, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(167, 167, 167)
+                                .addComponent(lbValorInicial))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(150, 150, 150)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btCriarConta, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtEntradaValorInicialCriar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 144, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(54, 54, 54)
                 .addComponent(lbCriarConta)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
                 .addComponent(lbValorInicial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtEntradaValorInicialCriar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btCriarConta)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
@@ -178,6 +192,7 @@ public class ValorInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCriarConta;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbCriarConta;
     private javax.swing.JLabel lbValorInicial;
     private javax.swing.JTextField txtEntradaValorInicialCriar;

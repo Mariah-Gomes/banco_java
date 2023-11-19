@@ -36,19 +36,25 @@ public class ControllerExibirSaldoCliente {
                         "CPF permitido", "Aviso",
                         JOptionPane.INFORMATION_MESSAGE);
                 // Passando para próxima página para exibir o saldo, e passando o CPF para reaproveitar.
-                ExibirSaldoExibindo viewExibirSaldo = new ExibirSaldoExibindo(cliente);
+                ExibirSaldoExibindo viewExibirSaldo =
+                        new ExibirSaldoExibindo(cliente);
                 ControllerExibindoSaldoCliente controllerExibindoSaldo = 
-                        new ControllerExibindoSaldoCliente(viewExibirSaldo, cpf);
+                        new ControllerExibindoSaldoCliente(
+                                viewExibirSaldo, cpf);
                 viewExibirSaldo.setVisible(true);
                 view.setVisible(false);
             }else{
                 // Erro de CPF não existente.
-                JOptionPane.showMessageDialog(view,"CPF não existente", "Erro", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(view,
+                        "CPF não existente", "Erro", 
+                        JOptionPane.ERROR_MESSAGE);
                 view.setVisible(false);
             }
         }catch(SQLException e){
             // Erro de conexão.
-            JOptionPane.showMessageDialog(view,"Erro de conexão", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(view,
+                    "Erro de conexão", "Erro", 
+                    JOptionPane.ERROR_MESSAGE);
             view.setVisible(false);
         }
     }

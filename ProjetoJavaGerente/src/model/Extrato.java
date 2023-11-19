@@ -13,7 +13,8 @@ public class Extrato extends Cliente{
         super(cpf);
     }
 
-    public Extrato(String cpf, String data, String hora, double valor, double tarifa, double saldo) {
+    public Extrato(String cpf, String data, String hora, double valor,
+            double tarifa, double saldo) {
         super(cpf, saldo);
         this.data = data;
         this.hora = hora;

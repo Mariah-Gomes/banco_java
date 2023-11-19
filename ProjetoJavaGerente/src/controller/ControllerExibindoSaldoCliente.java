@@ -13,8 +13,7 @@ public class ControllerExibindoSaldoCliente {
     private ExibirSaldoExibindo view;
     private String cpf;
 
-    public ControllerExibindoSaldoCliente(ExibirSaldoExibindo view,
-            String cpf) {
+    public ControllerExibindoSaldoCliente(ExibirSaldoExibindo view, String cpf){
         this.view = view;
         this.cpf = cpf;
     }
@@ -29,8 +28,8 @@ public class ControllerExibindoSaldoCliente {
             ClienteDAO dao = new ClienteDAO(conn);
             double saldoCliente = dao.consultarSaldoCliente(cliente);
             // Exibindo o saldo no GUI.
-            view.getTxtSaidaExibirSaldo().setText(
-                    "R$ " + String.valueOf(saldoCliente));
+            view.getTxtSaidaExibirSaldo().setText("R$ " +
+                    String.valueOf(saldoCliente));
         }catch(SQLException ex){
             // Erro de conexão.
             JOptionPane.showMessageDialog(view,
