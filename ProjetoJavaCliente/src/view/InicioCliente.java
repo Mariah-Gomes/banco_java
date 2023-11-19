@@ -1,20 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
-/**
- *
- * @author unifmgomes
- */
+import view.DebitarCliente;
+import controller.ControllerDebitoCliente;
+import controller.ControllerInicioCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import model.Cliente;
+
+
 public class InicioCliente extends javax.swing.JFrame {
 
     /**
      * Creates new form InicioCliente
      */
-    public InicioCliente() {
+    public InicioCliente (Cliente cliente) {
         initComponents();
+        controlInicioCliente = new ControllerInicioCliente(this);
     }
 
     /**
@@ -31,13 +33,14 @@ public class InicioCliente extends javax.swing.JFrame {
         debitarCliente1 = new javax.swing.JButton();
         exiberSaldoCliente = new javax.swing.JButton();
         debitarCliente3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloMenuCliente.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloMenuCliente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloMenuCliente.setText("Menu Principal:");
 
-        depositarCliente.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        depositarCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         depositarCliente.setText("Depositar");
         depositarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,7 +48,7 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
-        debitarCliente1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        debitarCliente1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         debitarCliente1.setText("Debitar");
         debitarCliente1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,7 +56,7 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
-        exiberSaldoCliente.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        exiberSaldoCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         exiberSaldoCliente.setText("Exibir Saldo");
         exiberSaldoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +64,7 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
-        debitarCliente3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        debitarCliente3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         debitarCliente3.setText("Exibir Extrato");
         debitarCliente3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,60 +72,71 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(293, Short.MAX_VALUE)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(tituloMenuCliente))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(debitarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(depositarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(116, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(exiberSaldoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(debitarCliente3))
-                .addGap(55, 55, 55))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(67, 67, 67)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(depositarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                                    .addComponent(debitarCliente1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(64, 64, 64)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(debitarCliente3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(exiberSaldoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(119, 119, 119)
+                                .addComponent(tituloMenuCliente)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(36, 36, 36)
                 .addComponent(tituloMenuCliente)
-                .addGap(21, 21, 21)
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(debitarCliente1)
-                    .addComponent(exiberSaldoCliente))
-                .addGap(31, 31, 31)
+                    .addComponent(exiberSaldoCliente)
+                    .addComponent(debitarCliente1))
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(depositarCliente)
                     .addComponent(debitarCliente3))
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void depositarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositarClienteActionPerformed
-        // TODO add your handling code here:
+        controlInicioCliente.depositarCliente();
     }//GEN-LAST:event_depositarClienteActionPerformed
 
     private void debitarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debitarCliente1ActionPerformed
-        // TODO add your handling code here:
+        controlInicioCliente.debitarCliente();
     }//GEN-LAST:event_debitarCliente1ActionPerformed
 
     private void exiberSaldoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exiberSaldoClienteActionPerformed
-        // TODO add your handling code here:
+        controlInicioCliente.exibirSaldoCliente();
     }//GEN-LAST:event_exiberSaldoClienteActionPerformed
 
     private void debitarCliente3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debitarCliente3ActionPerformed
-        // TODO add your handling code here:
+        controlInicioCliente.exibirExtratoCliente();
     }//GEN-LAST:event_debitarCliente3ActionPerformed
 
     /**
@@ -160,11 +174,84 @@ public class InicioCliente extends javax.swing.JFrame {
 //        });
 //    }
 
+    public JButton getDebitarCliente1() {
+        return debitarCliente1;
+    }
+
+    public void setDebitarCliente1(JButton debitarCliente1) {
+        this.debitarCliente1 = debitarCliente1;
+    }
+
+    public JButton getDebitarCliente3() {
+        return debitarCliente3;
+    }
+
+    public void setDebitarCliente3(JButton debitarCliente3) {
+        this.debitarCliente3 = debitarCliente3;
+    }
+
+    public JButton getDepositarCliente() {
+        return depositarCliente;
+    }
+
+    public void setDepositarCliente(JButton depositarCliente) {
+        this.depositarCliente = depositarCliente;
+    }
+
+    public JButton getExiberSaldoCliente() {
+        return exiberSaldoCliente;
+    }
+
+    public void setExiberSaldoCliente(JButton exiberSaldoCliente) {
+        this.exiberSaldoCliente = exiberSaldoCliente;
+    }
+
+    public JLabel getTituloMenuCliente() {
+        return tituloMenuCliente;
+    }
+
+ 
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new InicioCliente().setVisible(true);
+//            }
+//        });
+//    }
+    public void setTituloMenuCliente(JLabel tituloMenuCliente) {
+        this.tituloMenuCliente = tituloMenuCliente;
+    }
+    private ControllerInicioCliente controlInicioCliente;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton debitarCliente1;
     private javax.swing.JButton debitarCliente3;
     private javax.swing.JButton depositarCliente;
     private javax.swing.JButton exiberSaldoCliente;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloMenuCliente;
     // End of variables declaration//GEN-END:variables
 }

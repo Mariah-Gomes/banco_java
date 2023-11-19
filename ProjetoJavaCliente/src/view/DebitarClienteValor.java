@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
-/**
- *
- * @author unifmgomes
- */
+import controller.ControllerDebitoCliente;
+import model.Cliente;
+import controller.ControllerDebitoClienteValor;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 public class DebitarClienteValor extends javax.swing.JFrame {
 
-    /**
-     * Creates new form debitarClienteValor
-     */
-    public DebitarClienteValor() {
+    public DebitarClienteValor(Cliente cliente) {
         initComponents();
+        controllerDebitoValor = new ControllerDebitoClienteValor(this, cliente.getCpf());
     }
 
     /**
@@ -30,54 +28,69 @@ public class DebitarClienteValor extends javax.swing.JFrame {
         valorClienteDebitarTXT = new javax.swing.JLabel();
         valorCienteDebitarEntrada = new javax.swing.JTextField();
         butClienteDebitar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloDebiarCliente3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloDebiarCliente3.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloDebiarCliente3.setText("Debitar:");
 
-        valorClienteDebitarTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        valorClienteDebitarTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         valorClienteDebitarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorClienteDebitarTXT.setText("Valor:");
 
+        valorCienteDebitarEntrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         valorCienteDebitarEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valorCienteDebitarEntradaActionPerformed(evt);
             }
         });
 
-        butClienteDebitar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteDebitar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         butClienteDebitar.setText("Debitar");
+        butClienteDebitar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butClienteDebitarActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(146, 287, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(valorClienteDebitarTXT, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(valorCienteDebitarEntrada)
+                    .addComponent(butClienteDebitar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(tituloDebiarCliente3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(valorCienteDebitarEntrada)
-                            .addComponent(valorClienteDebitarTXT, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                            .addComponent(butClienteDebitar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(171, Short.MAX_VALUE))
+                        .addGap(8, 8, 8)
+                        .addComponent(tituloDebiarCliente3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(46, 46, 46)
                 .addComponent(tituloDebiarCliente3)
-                .addGap(41, 41, 41)
+                .addGap(18, 18, 18)
                 .addComponent(valorClienteDebitarTXT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(valorCienteDebitarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(18, 18, 18)
                 .addComponent(butClienteDebitar)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         pack();
@@ -86,6 +99,10 @@ public class DebitarClienteValor extends javax.swing.JFrame {
     private void valorCienteDebitarEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorCienteDebitarEntradaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_valorCienteDebitarEntradaActionPerformed
+
+    private void butClienteDebitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteDebitarActionPerformed
+        controllerDebitoValor.debitar();
+    }//GEN-LAST:event_butClienteDebitarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,9 +139,50 @@ public class DebitarClienteValor extends javax.swing.JFrame {
 //            }
 //        });
 //    }
+    private ControllerDebitoClienteValor controllerDebitoValor; 
 
+    public ControllerDebitoClienteValor getControllerDebitoValor() {
+        return controllerDebitoValor;
+    }
+
+    public void setControllerDebitoValor(ControllerDebitoClienteValor controllerDebitoValor) {
+        this.controllerDebitoValor = controllerDebitoValor;
+    }
+
+    public JButton getButClienteDebitar() {
+        return butClienteDebitar;
+    }
+
+    public void setButClienteDebitar(JButton butClienteDebitar) {
+        this.butClienteDebitar = butClienteDebitar;
+    }
+
+    public JLabel getTituloDebiarCliente3() {
+        return tituloDebiarCliente3;
+    }
+
+    public void setTituloDebiarCliente3(JLabel tituloDebiarCliente3) {
+        this.tituloDebiarCliente3 = tituloDebiarCliente3;
+    }
+
+    public JTextField getValorCienteDebitarEntrada() {
+        return valorCienteDebitarEntrada;
+    }
+
+    public void setValorCienteDebitarEntrada(JTextField valorCienteDebitarEntrada) {
+        this.valorCienteDebitarEntrada = valorCienteDebitarEntrada;
+    }
+
+    public JLabel getValorClienteDebitarTXT() {
+        return valorClienteDebitarTXT;
+    }
+
+    public void setValorClienteDebitarTXT(JLabel valorClienteDebitarTXT) {
+        this.valorClienteDebitarTXT = valorClienteDebitarTXT;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteDebitar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloDebiarCliente3;
     private javax.swing.JTextField valorCienteDebitarEntrada;
     private javax.swing.JLabel valorClienteDebitarTXT;
