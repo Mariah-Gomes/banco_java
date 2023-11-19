@@ -1,20 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
-/**
- *
- * @author unifmgomes
- */
+import controller.ControllerDebitoClienteValor;
+import controller.ControllerDepositarClienteValor;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import model.Cliente;
+
+
 public class DepositarClienteValor extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DepositarClienteValor
-     */
-    public DepositarClienteValor() {
+    
+    public DepositarClienteValor(Cliente cliente) {
         initComponents();
+        controllerDepositarValor = new ControllerDepositarClienteValor(this, cliente.getCpf());
     }
 
     /**
@@ -30,24 +30,26 @@ public class DepositarClienteValor extends javax.swing.JFrame {
         valorClienteDepositoTXT = new javax.swing.JLabel();
         valorClienteDepositarEntrada = new javax.swing.JTextField();
         butClienteDepositar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tituloDepositarCliente.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tituloDepositarCliente.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         tituloDepositarCliente.setText("Depositar:");
 
-        valorClienteDepositoTXT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        valorClienteDepositoTXT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         valorClienteDepositoTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorClienteDepositoTXT.setText("Valor:");
 
         valorClienteDepositarEntrada.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        valorClienteDepositarEntrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         valorClienteDepositarEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valorClienteDepositarEntradaActionPerformed(evt);
             }
         });
 
-        butClienteDepositar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        butClienteDepositar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         butClienteDepositar.setText("Depositar");
         butClienteDepositar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,31 +57,42 @@ public class DepositarClienteValor extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("Banco Mariago");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tituloDepositarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(valorClienteDepositoTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(valorClienteDepositarEntrada)
-                    .addComponent(butClienteDepositar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(139, 139, 139)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tituloDepositarCliente)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(valorClienteDepositoTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(butClienteDepositar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(valorClienteDepositarEntrada, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(56, 56, 56)
                 .addComponent(tituloDepositarCliente)
                 .addGap(18, 18, 18)
                 .addComponent(valorClienteDepositoTXT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(valorClienteDepositarEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(18, 18, 18)
                 .addComponent(butClienteDepositar)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         pack();
@@ -90,7 +103,7 @@ public class DepositarClienteValor extends javax.swing.JFrame {
     }//GEN-LAST:event_valorClienteDepositarEntradaActionPerformed
 
     private void butClienteDepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClienteDepositarActionPerformed
-        // TODO add your handling code here:
+        controllerDepositarValor.depositar();
     }//GEN-LAST:event_butClienteDepositarActionPerformed
 
     /**
@@ -128,8 +141,75 @@ public class DepositarClienteValor extends javax.swing.JFrame {
 //        });
 //    }
 
+    public JButton getButClienteDepositar() {
+        return butClienteDepositar;
+    }
+
+    public void setButClienteDepositar(JButton butClienteDepositar) {
+        this.butClienteDepositar = butClienteDepositar;
+    }
+
+    public JLabel getTituloDepositarCliente() {
+        return tituloDepositarCliente;
+    }
+
+    public void setTituloDepositarCliente(JLabel tituloDepositarCliente) {
+        this.tituloDepositarCliente = tituloDepositarCliente;
+    }
+
+    public JTextField getValorClienteDepositarEntrada() {
+        return valorClienteDepositarEntrada;
+    }
+
+    public void setValorClienteDepositarEntrada(JTextField valorClienteDepositarEntrada) {
+        this.valorClienteDepositarEntrada = valorClienteDepositarEntrada;
+    }
+
+    public JLabel getValorClienteDepositoTXT() {
+        return valorClienteDepositoTXT;
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(DepositarClienteValor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(DepositarClienteValor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(DepositarClienteValor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(DepositarClienteValor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new DepositarClienteValor().setVisible(true);
+//            }
+//        });
+//    }
+    public void setValorClienteDepositoTXT(JLabel valorClienteDepositoTXT) {
+        this.valorClienteDepositoTXT = valorClienteDepositoTXT;
+    }
+    private ControllerDepositarClienteValor controllerDepositarValor;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butClienteDepositar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloDepositarCliente;
     private javax.swing.JTextField valorClienteDepositarEntrada;
     private javax.swing.JLabel valorClienteDepositoTXT;
