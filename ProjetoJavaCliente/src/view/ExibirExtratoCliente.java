@@ -42,7 +42,7 @@ public class ExibirExtratoCliente extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         tituloExibirExtratoCliente1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         tituloExibirExtratoCliente1.setText("Exibir Extrato:");

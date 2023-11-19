@@ -22,24 +22,20 @@ public class ControllerInicioCliente {
     public void debitarCliente(){
         DebitarCliente viewDebitarCliente = new DebitarCliente();
         viewDebitarCliente.setVisible(true);
-        view.setVisible(false);
     }
     
     public void depositarCliente(){
         DepositarCliente viewDepositarCliente = new DepositarCliente();
         viewDepositarCliente.setVisible(true);
-        view.setVisible(false);
     }
     
     public void exibirExtratoCliente(){
         ExibirExtratoCliente viewExibirExtratoCliente = new ExibirExtratoCliente();
         viewExibirExtratoCliente.setVisible(true);
-        view.setVisible(false);
     }
     
     public void exibirSaldoCliente(){
         ExibirSaldoCliente viewExibirSaldoCliente = new ExibirSaldoCliente();
         viewExibirSaldoCliente.setVisible(true);
-        view.setVisible(false);
     }
 }

@@ -31,7 +31,7 @@ public class DepositarClienteValor extends javax.swing.JFrame {
         valorClienteDepositarEntrada = new javax.swing.JTextField();
         butClienteDepositar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         tituloDepositarCliente.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         tituloDepositarCliente.setText("Depositar:");

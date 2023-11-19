@@ -29,7 +29,7 @@ public class DebitarClienteValor extends javax.swing.JFrame {
         valorCienteDebitarEntrada = new javax.swing.JTextField();
         butClienteDebitar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         tituloDebiarCliente3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         tituloDebiarCliente3.setText("Debitar:");

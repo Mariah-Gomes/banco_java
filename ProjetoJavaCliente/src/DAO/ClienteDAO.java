@@ -5,7 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import model.Cliente;
+import model.Extrato;
 
 public class ClienteDAO {
     private Connection conn;
@@ -15,14 +17,6 @@ public class ClienteDAO {
     }
     
     public ResultSet consultar(Cliente cliente) throws SQLException{
-        
-        // esta solução não é mais eficiente, pois permite que comandos sql sejam inseridos via campos
-        // exemplo com usuário válido: gbiondi '--
-        
-//        String sql = "select * from aluno where usuario = '" +
-//                aluno.getUsuario()+ "' AND senha = '" +
-//                aluno.getSenha() + "'";
-
         String sql = "select * from clientes where cpf = ? and senha = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, cliente.getCpf());
@@ -75,15 +69,38 @@ public class ClienteDAO {
         conn.close();
     }
         
-        public void salvarExtrato(Cliente cliente) throws SQLException{
-        String sql = "update extratos set saldo = ? where cpf = ?";
+        // Função para inserir um extrato de um cliente no banco de dados.
+    public void inserirExtrato(Extrato extrato) throws SQLException{
+        String sql = "insert into extratos (cpf, data, hora, valor, tarifa, saldo) values (?, ?, ?, ?, ?, ?)";
         PreparedStatement statement = conn.prepareStatement(sql);
-        statement.setDouble(1, cliente.getSaldo());
-        statement.setString(2, cliente.getCpf());
-        //statement.setString(3, cliente.getTarifa());
-        //
+        statement.setString(1, extrato.getCpf());
+        statement.setString(2, extrato.getData());
+        statement.setString(3, extrato.getHora());
+        statement.setDouble(4, extrato.getValor());
+        statement.setDouble(5, extrato.getTarifa());
+        statement.setDouble(6, extrato.getSaldo());
         statement.execute();
         conn.close();
     }
+    
+    public ArrayList<Extrato> consultarExtratosCliente(Cliente cliente) throws SQLException{
+        ArrayList<Extrato> extratosCliente = new ArrayList<>();
+        String sql = "select * from extratos where cpf = ?";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(1, cliente.getCpf());
+        ResultSet resultado = statement.executeQuery();
+        while(resultado.next()){
+            Extrato extrato = new Extrato();
+            extrato.setCpf(resultado.getString("cpf"));
+            extrato.setData(resultado.getString("data"));
+            extrato.setHora(resultado.getString("hora"));
+            extrato.setValor(resultado.getDouble("valor"));
+            extrato.setTarifa(resultado.getDouble("tarifa"));
+            extrato.setSaldo(resultado.getDouble("saldo"));
+            extratosCliente.add(extrato);
+        }
+        return extratosCliente;
+    }
+    
 }
 

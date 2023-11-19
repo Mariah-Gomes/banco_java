@@ -2,17 +2,22 @@
 package model;
 
 public class Cliente {
-    private String cpf;
-    private String conta;
-    private String nome;
-    private String senha;
-    private double saldo;
+    protected String cpf;
+    protected String conta;
+    protected String nome;
+    protected String senha;
+    protected double saldo;
 
     public Cliente() {
     }
 
     public Cliente(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Cliente(String cpf, double saldo) {
+        this.cpf = cpf;
+        this.saldo = saldo;
     }
     
     public Cliente(String nome, String cpf, String senha, String conta, double saldo) {

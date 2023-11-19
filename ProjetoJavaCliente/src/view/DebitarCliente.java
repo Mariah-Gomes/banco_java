@@ -25,7 +25,7 @@ public class DebitarCliente extends javax.swing.JFrame {
         senhaClienteDebitarEntrada = new javax.swing.JTextField();
         butClienteDebitarEntrar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         tituloDebitarCliente1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         tituloDebitarCliente1.setText("Debitar:");

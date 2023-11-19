@@ -46,7 +46,7 @@ public class ExibirSaldoCliente extends javax.swing.JFrame {
         cpfClienteDebitarTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cpfClienteDebitarTXT.setText("CPF:");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         tituloExibirSaldoCliente1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         tituloExibirSaldoCliente1.setText("Exibir Saldo:");
