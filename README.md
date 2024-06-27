@@ -24,7 +24,7 @@ Em seguida, gravamos um vídeo explicando as funcionalidades do projeto
 
 
 
-[![Demonstração do Projeto](https://youtu.be/zh4RRWeGqok)
+![Demonstração do Projeto](https://youtu.be/zh4RRWeGqok)
 
 ## :computer: Tecnologias Utilizadas
 - Utilizamos a linguagens Java
