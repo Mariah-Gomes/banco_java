@@ -17,12 +17,12 @@
 🔹[Desenvolvedores](#busts_in_silhouette-desenvolvedores)
 
 ## :pencil: Descrição do Projeto
-Aqui a gente escreve um ou dois parágrafos explicando o projeto
+Nos foi proposto realizar um banco em java onde tinhamos a parte do gerente e do cliente. A parte do gerente fazia funções de criar conta de gerente, de cliente, apagava as contas e outras funcionalidades de gerência de um banco. Entretanto, a parte de cliente fazia funções de débito e depósito na sua conta e algumas outras funcionalidades que um cliente pode fazer em um banco. Esse projeto conectamos com o banco de dados do PostgreSQL para salvar tanto as informações do gerente, ou seja, seu login e senha, e do cliente, com login, senha, saldo da conta e entre outros dados.
 
 ## :mag_right: Funcionalidade
 Em seguida, gravamos um vídeo explicando as funcionalidades do projeto
 
-(https://www.youtube.com/watch?v=zh4RRWeGqok)
+https://www.youtube.com/watch?v=zh4RRWeGqok
 
 ## :computer: Tecnologias Utilizadas
 - Utilizamos a linguagens Java
