@@ -22,7 +22,7 @@ Aqui a gente escreve um ou dois parágrafos explicando o projeto
 ## :mag_right: Funcionalidade
 Em seguida, gravamos um vídeo explicando as funcionalidades do projeto
 
-![Link demonstrando as funcionalidades](https://www.youtube.com/watch?v=zh4RRWeGqok)
+(https://www.youtube.com/watch?v=zh4RRWeGqok)
 
 ## :computer: Tecnologias Utilizadas
 - Utilizamos a linguagens Java
